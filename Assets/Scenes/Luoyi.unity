@@ -224,7 +224,7 @@ SpriteRenderer:
   m_Size: {x: 47.129997, y: 11.360001}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
 --- !u!1 &949975682
 GameObject:
@@ -259,8 +259,9 @@ MonoBehaviour:
   hook: {fileID: 1284415560}
   swingSpeed: 2
   maxAngle: 60
+  rotationOffset: 0
   extendSpeed: 5
-  maxLength: 5
+  maxLength: 10
 --- !u!120 &949975684
 LineRenderer:
   serializedVersion: 3
@@ -315,7 +316,7 @@ LineRenderer:
   - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 1
+    widthMultiplier: 0.1
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -396,6 +397,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2332267281694862849, guid: e83d7cd2b0b5d4edb90124c56569779e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 2332267281694862849, guid: e83d7cd2b0b5d4edb90124c56569779e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 2332267281694862849, guid: e83d7cd2b0b5d4edb90124c56569779e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 2332267281694862849, guid: e83d7cd2b0b5d4edb90124c56569779e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.04411
       objectReference: {fileID: 0}
@@ -434,6 +447,10 @@ PrefabInstance:
     - target: {fileID: 2332267281694862849, guid: e83d7cd2b0b5d4edb90124c56569779e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2332267281694862849, guid: e83d7cd2b0b5d4edb90124c56569779e, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8995080470142146980, guid: e83d7cd2b0b5d4edb90124c56569779e, type: 3}
       propertyPath: m_Name
@@ -482,7 +499,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 949975685}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -571,12 +588,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: -465805845, guid: f9d6a2b3bfa2c4a70a556f76d5d45f13, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.29, y: 4.58}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
