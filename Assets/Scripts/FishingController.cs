@@ -14,6 +14,9 @@ public class FishingController : MonoBehaviour
     public float swingSpeed = 2f;       // the speed of swinging
     public float maxAngle = 60f;        // the largest angle of swinging
 
+    [Header("Hook Rotation")]
+    public float rotationOffset = 90f;
+
     [Header("Extend and Retract Settings")]
     public float extendSpeed = 5f;      // the speed of extending
     public float maxLength = 5f;        // maximum length of swing
@@ -53,7 +56,9 @@ public class FishingController : MonoBehaviour
 
         // Use the angle to calculate the direction of hook
         Vector2 dir = AngleToDirection(currentAngle);
-        hook.position = transform.position + (Vector3)(dir * 0.1f); 
+        float angleDeg = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        hook.rotation = Quaternion.Euler(0, 0, angleDeg + rotationOffset);
+        hook.position = transform.position + (Vector3)(dir * 0.1f);
 
         // press space to lock on current angle, and switch to extending state
         if (Input.GetKeyDown(KeyCode.Space))
@@ -75,6 +80,8 @@ public class FishingController : MonoBehaviour
         }
 
         Vector2 dir = AngleToDirection(lockedAngle);
+        float angleDeg = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        hook.rotation = Quaternion.Euler(0, 0, angleDeg + rotationOffset);
         hook.position = transform.position + (Vector3)(dir * currentLength);
     }
 
@@ -96,6 +103,8 @@ public class FishingController : MonoBehaviour
         }
 
         Vector2 dir = AngleToDirection(lockedAngle);
+        float angleDeg = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        hook.rotation = Quaternion.Euler(0, 0, angleDeg + rotationOffset);
         hook.position = transform.position + (Vector3)(dir * currentLength);
     }
 
@@ -112,6 +121,7 @@ public class FishingController : MonoBehaviour
     {
         float rad = angleDegrees * Mathf.Deg2Rad;
         return new Vector2(Mathf.Sin(rad), -Mathf.Cos(rad));
+
     }
 
     void UpdateLine()
