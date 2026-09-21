@@ -11,6 +11,7 @@ public class Fish : MonoBehaviour
     public float swimRange = 2f;      // swim range of the fish
 
     private Vector3 startPosition;
+    private float previousOffsetX = 0f;
 
     void Start()
     {
@@ -19,8 +20,20 @@ public class Fish : MonoBehaviour
 
     void Update()
     {
-        // use a sine wave to make the fish swim back and forth around startPosition
+        // use a sine wave to make the fish swim back and forth around startPositions
         float offsetX = Mathf.Sin(Time.time * swimSpeed) * swimRange;
         transform.position = startPosition + new Vector3(offsetX, 0f, 0f);
+
+        // check moving direction and flip sprite accordingly
+        if (offsetX > previousOffsetX)
+        {
+            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
+        else if (offsetX < previousOffsetX)
+        {
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
+
+        previousOffsetX = offsetX;
     }
 }

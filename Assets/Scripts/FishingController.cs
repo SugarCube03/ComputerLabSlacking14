@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public class FishingController : MonoBehaviour
 {
@@ -10,6 +11,12 @@ public class FishingController : MonoBehaviour
     public Transform hook;              // the hook object
     private LineRenderer lineRenderer;
 
+    [Header("UI")]
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI fishCountText;
+    private int totalScore = 0;
+    private int fishCount = 0;
+
     [Header("Swing Settings")]
     public float swingSpeed = 2f;       // the speed of swinging
     public float maxAngle = 60f;        // the largest angle of swinging
@@ -20,6 +27,11 @@ public class FishingController : MonoBehaviour
     [Header("Extend and Retract Settings")]
     public float extendSpeed = 5f;      // the speed of extending
     public float maxLength = 5f;        // maximum length of swing
+
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip castSound;      // sound of casting the fishing rod
+    public AudioClip catchSound;     // sound of successfully catch the fish
 
     private float currentAngle;         // current angle of swing
     private float lockedAngle;          // the angle at the frame when pressing the button
@@ -66,6 +78,8 @@ public class FishingController : MonoBehaviour
             lockedAngle = currentAngle;
             currentLength = 0f;
             currentState = FishingState.Extending;
+
+            audioSource.PlayOneShot(castSound);  
         }
     }
 
@@ -87,7 +101,13 @@ public class FishingController : MonoBehaviour
 
     void HandleRetracting()
     {
-        currentLength -= extendSpeed * Time.deltaTime;
+        float actualRetractSpeed = extendSpeed;
+        if (caughtFish != null)
+        {
+            actualRetractSpeed = extendSpeed / caughtFish.weight;
+        }
+
+        currentLength -= actualRetractSpeed * Time.deltaTime;
 
         if (currentLength <= 0f)
         {
@@ -96,7 +116,13 @@ public class FishingController : MonoBehaviour
 
             if (caughtFish != null)// if caught the fish, add point and destroy the fish
             {
-                Debug.Log("Caught fish! Score: " + caughtFish.score);
+                totalScore += caughtFish.score;
+                fishCount += 1;
+                scoreText.text = "Score: " + totalScore;
+                fishCountText.text = "Fish Caught: " + fishCount;
+
+                audioSource.PlayOneShot(catchSound); // sound of catching fish
+
                 Destroy(caughtFish.gameObject);
                 caughtFish = null;
             }
