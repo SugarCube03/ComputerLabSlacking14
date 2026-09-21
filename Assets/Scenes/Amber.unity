@@ -264,6 +264,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7209319343042875432, guid: 124bd3709f98346129f89502608c5f64, type: 3}
+      propertyPath: ingredients.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7209319343042875432, guid: 124bd3709f98346129f89502608c5f64, type: 3}
+      propertyPath: 'ingredients.Array.data[0]'
+      value: 
+      objectReference: {fileID: 5159081693221166674}
     - target: {fileID: 8595995675493909100, guid: 124bd3709f98346129f89502608c5f64, type: 3}
       propertyPath: m_Name
       value: SandwichMinigame
@@ -313,6 +321,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 124bd3709f98346129f89502608c5f64, type: 3}
+--- !u!114 &5159081693221166674 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1414423258139568816, guid: 124bd3709f98346129f89502608c5f64, type: 3}
+  m_PrefabInstance: {fileID: 5159081693221166673}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 403f7a4963fd14efb978fb8f94f4f689, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Ingredient
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
