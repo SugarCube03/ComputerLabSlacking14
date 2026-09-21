@@ -54,6 +54,8 @@ public class Ingredient : MonoBehaviour
     // swap to the next picture now that the cut has landed
     void ApplyCut()
     {
+        Debug.Log("cut " + cutsDone);
+
         if (cutsDone < cutSprites.Length)
         {
             sr.sprite = cutSprites[cutsDone];

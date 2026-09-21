@@ -20,7 +20,10 @@ public class SandwichStack : MonoBehaviour
 
     void Start()
     {
-        guide.Build(recipe);
+        if (guide != null)
+        {
+            guide.Build(recipe);
+        }
     }
 
     // is the whole sandwich complete
@@ -49,6 +52,11 @@ public class SandwichStack : MonoBehaviour
 
         // put the piece where the next layer goes
         piece.transform.position = nextLayer.position;
+        // lock it down
+        piece.enabled = false;
+
+        // draw each layer on top of the one below it
+        piece.GetComponent<SpriteRenderer>().sortingOrder = placedCount;
 
         // move up the nextLayer
         Vector3 temp = nextLayer.position;
@@ -56,7 +64,10 @@ public class SandwichStack : MonoBehaviour
         nextLayer.position = temp;
 
         // tick it off on the guide card
-        guide.MarkDone(placedCount);
+        if (guide != null)
+        {
+            guide.MarkDone(placedCount);
+        }
 
         placedCount++;
         return true;

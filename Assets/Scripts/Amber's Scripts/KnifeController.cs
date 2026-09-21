@@ -28,7 +28,7 @@ public class KnifeController : MonoBehaviour
             swiping = false;
             Vector2 swipeEnd = GetMouseWorldPosition();
 
-            // ignore this swipe
+            // long enough to count as a swipe, so send it
             if (Vector2.Distance(swipeStart, swipeEnd) >= minSwipeDistance)
             {
                 SendSwipe(swipeStart, swipeEnd);

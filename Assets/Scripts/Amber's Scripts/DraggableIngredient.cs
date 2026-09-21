@@ -23,7 +23,7 @@ public class DraggableIngredient : MonoBehaviour
         startPosition = transform.position;
     }
 
-    // called whe mouse is pressed on object's collider
+    // called when mouse is pressed on object's collider
     void OnMouseDown()
     {
         dragging = true;
