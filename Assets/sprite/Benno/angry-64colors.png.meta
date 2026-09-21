@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f8bfa7e9683884e5ab8e869189a18da3
+guid: e1bb9d95080de4fc5ba966b45ca099b6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3731186067008831805
-    second: 6b9605a9-2ec1-4f4f-9247-967d630140d6-32colors_0
+      213: -3668422608059015248
+    second: angry-64colors_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BackPointUp
+      name: angry-64colors_0
       rect:
         serializedVersion: 2
-        x: 199
-        y: 6
-        width: 365
-        height: 839
+        x: 175
+        y: 0
+        width: 392
+        height: 863
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d31c2f295f5d7c330800000000000000
-      internalID: 3731186067008831805
+      spriteID: 0bf51a8f215271dc0800000000000000
+      internalID: -3668422608059015248
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5a4966b5917ce416a9fe958e1f2c2e01
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BackPointUp: 3731186067008831805
+      angry-64colors_0: -3668422608059015248
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
