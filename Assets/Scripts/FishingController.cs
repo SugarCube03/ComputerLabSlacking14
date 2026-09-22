@@ -1,20 +1,22 @@
 using UnityEngine;
 using TMPro;
+using System;
 
-public class FishingController : MonoBehaviour
+public class FishingController : MonoBehaviour, Iminigame
 {
     // showing which state hook currently at
     private enum FishingState { Swinging, Extending, Retracting }
     private FishingState currentState = FishingState.Swinging;
+    private String GameInstruction = "Press space to catch the fish";//game instruction
 
     [Header("References")]
     public Transform hook;              // the hook object
     private LineRenderer lineRenderer;
 
     [Header("UI")]
-    public TextMeshProUGUI scoreText;
-    public TextMeshProUGUI fishCountText;
-    private int totalScore = 0;
+    public TextMeshProUGUI scoreText; //put the score text here
+    public TextMeshProUGUI fishCountText;// put the fish Count text here
+    private int totalScore = 0;// start with 0
     private int fishCount = 0;
 
     [Header("Swing Settings")]
@@ -40,7 +42,7 @@ public class FishingController : MonoBehaviour
     void Start()
     {
         lineRenderer = GetComponent<LineRenderer>();
-        lineRenderer.positionCount = 2;
+        lineRenderer.positionCount = 2; 
     }
 
     void Update()
@@ -154,5 +156,22 @@ public class FishingController : MonoBehaviour
     {
         lineRenderer.SetPosition(0, transform.position);
         lineRenderer.SetPosition(1, hook.position);
+    }
+
+    // public bool IsGameWon()
+    // {
+    //     return // fish caught == target
+    // }
+
+   
+
+    public bool IsGameWon()
+    {
+        return false;
+    }
+
+    public string GetGameInstructions()
+    {
+        return GameInstruction;
     }
 }
