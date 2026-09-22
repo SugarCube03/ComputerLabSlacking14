@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using System;
+using UnityEngine.UI;
 
 public class FishingController : MonoBehaviour, Iminigame
 {
@@ -18,6 +19,14 @@ public class FishingController : MonoBehaviour, Iminigame
     public TextMeshProUGUI fishCountText;// put the fish Count text here
     private int totalScore = 0;// start with 0
     private int fishCount = 0;
+
+    [Header("Fish Icons")]
+    public Image[] fishIcons;        // 5 Images
+    public Sprite caughtSprite; 
+    public Sprite uncaughtSprite; 
+
+    [Header("Ending")]
+    public GameObject endingPanel;
 
     [Header("Swing Settings")]
     public float swingSpeed = 2f;       // the speed of swinging
@@ -43,6 +52,14 @@ public class FishingController : MonoBehaviour, Iminigame
     {
         lineRenderer = GetComponent<LineRenderer>();
         lineRenderer.positionCount = 2; //line renderer use two points/positions to draw a line
+
+        if (fishIcons != null)
+        {
+            foreach (Image icon in fishIcons)
+            {
+                icon.sprite = uncaughtSprite;
+            }
+        }
     }
 
     void Update()
@@ -74,13 +91,13 @@ public class FishingController : MonoBehaviour, Iminigame
         hook.rotation = Quaternion.Euler(0, 0, angleDeg + rotationOffset);// this is for setting the hook rotation, only change the z axis. because the hook doesn't rotate in the angle that I expected, so I add this to fix the problem
         hook.position = transform.position + (Vector3)(dir * 0.1f);//set the position of hook, to make sure the hook is connected to the end of the fishing rod
         // press space to lock on current angle, and switch to extending state
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetMouseButtonDown(0))
         {
             lockedAngle = currentAngle;// freeze the angle of hook
             currentLength = 0f;
             currentState = FishingState.Extending;
 
-            audioSource.PlayOneShot(castSound); 
+            audioSource.PlayOneShot(castSound);
         }
     }
 
@@ -115,17 +132,29 @@ public class FishingController : MonoBehaviour, Iminigame
             currentLength = 0f;
             currentState = FishingState.Swinging; // retract to the starting point, start swinging again
 
-            if (caughtFish != null)// if caught the fish, add point and destroy the fish
+            if (caughtFish != null)
             {
                 totalScore += caughtFish.score;
                 fishCount += 1;
                 scoreText.text = "Score: " + totalScore;
                 fishCountText.text = "Fish Caught: " + fishCount;
 
-                audioSource.PlayOneShot(catchSound); // sound of catching fish
+                audioSource.PlayOneShot(catchSound);
+
+                // turn the icons yellow by index
+                if (fishIcons != null && fishCount - 1 < fishIcons.Length)
+                {
+                    fishIcons[fishCount - 1].sprite = caughtSprite;
+                }
 
                 Destroy(caughtFish.gameObject);
                 caughtFish = null;
+
+                // check whether all fish is caught
+                if (IsGameWon())
+                {
+                    ShowEnding();
+                }
             }
         }
 
@@ -136,11 +165,17 @@ public class FishingController : MonoBehaviour, Iminigame
     }
 
     private Fish caughtFish;  // record the caught fish
+    public bool HasCaughtFish => caughtFish != null;
 
     public void CatchFish(Fish fish)
     {
-        caughtFish = fish;
-        currentState = FishingState.Retracting;
+    if (caughtFish != null)
+    {
+        return; 
+    }
+
+    caughtFish = fish;
+    currentState = FishingState.Retracting;
     }
 
     //  change angle to direction
@@ -155,6 +190,14 @@ public class FishingController : MonoBehaviour, Iminigame
     {
         lineRenderer.SetPosition(0, transform.position);
         lineRenderer.SetPosition(1, hook.position);
+    }
+
+    void ShowEnding()
+    {
+        if (endingPanel != null)
+        {
+            endingPanel.SetActive(true);
+        }
     }
 
     public bool IsGameWon()

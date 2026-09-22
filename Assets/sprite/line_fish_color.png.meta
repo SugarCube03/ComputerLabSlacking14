@@ -1,0 +1,507 @@
+fileFormatVersion: 2
+guid: b0af367905b4f495290659eac680521f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8727434651210068151
+    second: line_fish_color_0
+  - first:
+      213: 4669155525692185571
+    second: line_fish_color_1
+  - first:
+      213: -553952858721380610
+    second: line_fish_color_2
+  - first:
+      213: 6502138916935707307
+    second: line_fish_color_3
+  - first:
+      213: -2493300780936044523
+    second: line_fish_color_4
+  - first:
+      213: 8012222124524123999
+    second: line_fish_color_5
+  - first:
+      213: -7327681122479077497
+    second: line_fish_color_6
+  - first:
+      213: 9000026073477284851
+    second: line_fish_color_7
+  - first:
+      213: 8436073629649577707
+    second: line_fish_color_8
+  - first:
+      213: -8777152088366791005
+    second: line_fish_color_9
+  - first:
+      213: 5977183463894466651
+    second: line_fish_color_10
+  - first:
+      213: -6887841368770333869
+    second: line_fish_color_11
+  - first:
+      213: 8754478543892942980
+    second: line_fish_color_12
+  - first:
+      213: -7851238903584801984
+    second: line_fish_color_13
+  - first:
+      213: -1631120174448260017
+    second: line_fish_color_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: line_fish_color_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 13
+        width: 39
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b0bfc943931e1970800000000000000
+      internalID: 8727434651210068151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: line_fish_color_1
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 12
+        width: 39
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3eb5fed563c2cc040800000000000000
+      internalID: 4669155525692185571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: line_fish_color_2
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 12
+        width: 39
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef699995fc6ff48f0800000000000000
+      internalID: -553952858721380610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: line_fish_color_3
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 12
+        width: 38
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baa223825ec3c3a50800000000000000
+      internalID: 6502138916935707307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: line_fish_color_4
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 13
+        width: 38
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5106a1a5624066dd0800000000000000
+      internalID: -2493300780936044523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: line_fish_color_5
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 12
+        width: 39
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5739c95291213f60800000000000000
+      internalID: 8012222124524123999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: line_fish_color_6
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 12
+        width: 39
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7878c43c7d8de4a90800000000000000
+      internalID: -7327681122479077497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: line_fish_color_7
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 12
+        width: 39
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f30ed6970486ec70800000000000000
+      internalID: 9000026073477284851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: line_fish_color_8
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 13
+        width: 38
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be6ad4a1544f21570800000000000000
+      internalID: 8436073629649577707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: line_fish_color_9
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 13
+        width: 38
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a6c151ddaa413680800000000000000
+      internalID: -8777152088366791005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: line_fish_color_10
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 13
+        width: 39
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b50c4c221b833f250800000000000000
+      internalID: 5977183463894466651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: line_fish_color_11
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 12
+        width: 39
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3533439b4c87960a0800000000000000
+      internalID: -6887841368770333869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: line_fish_color_12
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 12
+        width: 39
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 480948a3ad72e7970800000000000000
+      internalID: 8754478543892942980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: line_fish_color_13
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 12
+        width: 38
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04bb91990dbca0390800000000000000
+      internalID: -7851238903584801984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: line_fish_color_14
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 13
+        width: 38
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4cc908e7d81d59e0800000000000000
+      internalID: -1631120174448260017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      line_fish_color_0: 8727434651210068151
+      line_fish_color_1: 4669155525692185571
+      line_fish_color_10: 5977183463894466651
+      line_fish_color_11: -6887841368770333869
+      line_fish_color_12: 8754478543892942980
+      line_fish_color_13: -7851238903584801984
+      line_fish_color_14: -1631120174448260017
+      line_fish_color_2: -553952858721380610
+      line_fish_color_3: 6502138916935707307
+      line_fish_color_4: -2493300780936044523
+      line_fish_color_5: 8012222124524123999
+      line_fish_color_6: -7327681122479077497
+      line_fish_color_7: 9000026073477284851
+      line_fish_color_8: 8436073629649577707
+      line_fish_color_9: -8777152088366791005
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
