@@ -42,12 +42,12 @@ public class FishingController : MonoBehaviour, Iminigame
     void Start()
     {
         lineRenderer = GetComponent<LineRenderer>();
-        lineRenderer.positionCount = 2; 
+        lineRenderer.positionCount = 2; //line renderer use two points/positions to draw a line
     }
 
     void Update()
     {
-        switch (currentState)
+        switch (currentState)//there are 3 different type of state, and the switch will moniter which state is currently on
         {
             case FishingState.Swinging:
                 HandleSwinging();
@@ -65,23 +65,22 @@ public class FishingController : MonoBehaviour, Iminigame
 
     void HandleSwinging()
     {
-        //  use sine to make sure the angle is between -maxAngle and +maxAngle
+        //  use sine to make sure the angle is between -maxAngle and +maxAngle, time.time is the the total time of this round of game play
         currentAngle = Mathf.Sin(Time.time * swingSpeed) * maxAngle;
 
         // Use the angle to calculate the direction of hook
         Vector2 dir = AngleToDirection(currentAngle);
-        float angleDeg = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        hook.rotation = Quaternion.Euler(0, 0, angleDeg + rotationOffset);
-        hook.position = transform.position + (Vector3)(dir * 0.1f);
-
+        float angleDeg = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;// Atan2 is using the value of x and y to deduct current degree, and Mathf.Rad2Deg is switch from radian to degree
+        hook.rotation = Quaternion.Euler(0, 0, angleDeg + rotationOffset);// this is for setting the hook rotation, only change the z axis. because the hook doesn't rotate in the angle that I expected, so I add this to fix the problem
+        hook.position = transform.position + (Vector3)(dir * 0.1f);//set the position of hook, to make sure the hook is connected to the end of the fishing rod
         // press space to lock on current angle, and switch to extending state
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            lockedAngle = currentAngle;
+            lockedAngle = currentAngle;// freeze the angle of hook
             currentLength = 0f;
             currentState = FishingState.Extending;
 
-            audioSource.PlayOneShot(castSound);  
+            audioSource.PlayOneShot(castSound); 
         }
     }
 
@@ -106,10 +105,10 @@ public class FishingController : MonoBehaviour, Iminigame
         float actualRetractSpeed = extendSpeed;
         if (caughtFish != null)
         {
-            actualRetractSpeed = extendSpeed / caughtFish.weight;
+            actualRetractSpeed = extendSpeed / caughtFish.weight;// heavier the fish, longer the time to catch the fish
         }
 
-        currentLength -= actualRetractSpeed * Time.deltaTime;
+        currentLength -= actualRetractSpeed * Time.deltaTime;//the speed of retracting length
 
         if (currentLength <= 0f)
         {
@@ -158,16 +157,9 @@ public class FishingController : MonoBehaviour, Iminigame
         lineRenderer.SetPosition(1, hook.position);
     }
 
-    // public bool IsGameWon()
-    // {
-    //     return // fish caught == target
-    // }
-
-   
-
     public bool IsGameWon()
     {
-        return false;
+        return fishCount == 5;
     }
 
     public string GetGameInstructions()
