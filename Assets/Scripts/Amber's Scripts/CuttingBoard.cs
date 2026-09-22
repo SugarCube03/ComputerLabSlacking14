@@ -1,13 +1,13 @@
 using UnityEngine;
 
-// goes on each ingredient so player can drag it onto the plate
+// for the cuttingboard
 public class CuttingBoard : MonoBehaviour
 {
     // where the piece should go when dragged
-    public Transform newPiece;
+    public Transform slot;
 
     // to check if there is an ingredient on the board
-    public IngredientType currentPiece;
+    public DraggableIngredient currentPiece;
 
     // put an ingredient on the cutting
     public void Place(DraggableIngredient piece)
@@ -15,11 +15,11 @@ public class CuttingBoard : MonoBehaviour
         // there is something else there already
         if (currentPiece != null)
         {
-            currentPiece.returnHome();
+            currentPiece.ReturnHome();
         }
 
         // snap piece there
-        piece.transform.position = newPiece.position;
+        piece.transform.position = slot.position;
         currentPiece = piece;
     }
 
@@ -31,7 +31,7 @@ public class CuttingBoard : MonoBehaviour
             return null;
         }
 
-        return currentPiece.getComponent<Ingredient>();
+        return currentPiece.GetComponent<Ingredient>();
     }
 
     // call when the piece leaves the board

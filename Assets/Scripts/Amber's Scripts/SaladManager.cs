@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 
 // brain of minigame
-public class SandwichManager : MonoBehaviour
+public class SaladManager : MonoBehaviour
 {
     // three parts of playthrough
     public enum Phase

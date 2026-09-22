@@ -6,9 +6,6 @@ public class DraggableIngredient : MonoBehaviour
     // what type of piece is this
     public IngredientType type;
 
-    // the plate we're dropping onto
-    public SandwichStack stack;
-
     // how close to the plate the drop has to be to count
     public float snapDistance = 1f;
 
@@ -58,7 +55,7 @@ public class DraggableIngredient : MonoBehaviour
     }
 
     // snap back to where it started
-    void ReturnHome()
+    public void ReturnHome()
     {
         transform.position = startPosition;
     }
