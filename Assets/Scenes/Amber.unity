@@ -130,9 +130,10 @@ GameObject:
   - component: {fileID: 21590537}
   - component: {fileID: 21590536}
   - component: {fileID: 21590538}
+  - component: {fileID: 21590539}
   m_Layer: 0
   m_Name: WholeOnion_0
-  m_TagString: Untagged
+  m_TagString: Cuttable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -847,6 +848,21 @@ PolygonCollider2D:
       - {x: -3.62, y: -2.245}
       - {x: -3.6299999, y: -2.235}
   m_UseDelaunayMesh: 1
+--- !u!114 &21590539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21590535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2401cf3a57cac48d79745db67ae70603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Drag
+  cuttingBoard: {fileID: 1710053148}
+  bowl: {fileID: 870738829}
+  cutSprite: {fileID: -7553434852870291856, guid: a402ded7d14f847eb9d06f608bead074, type: 3}
 --- !u!1 &22810281
 GameObject:
   m_ObjectHideFlags: 0
@@ -858,9 +874,10 @@ GameObject:
   - component: {fileID: 22810283}
   - component: {fileID: 22810282}
   - component: {fileID: 22810284}
+  - component: {fileID: 22810285}
   m_Layer: 0
   m_Name: WholeCelery_0
-  m_TagString: Untagged
+  m_TagString: Cuttable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1144,6 +1161,21 @@ PolygonCollider2D:
       - {x: 1.7099999, y: 0.53999996}
       - {x: 1.6999999, y: 0.55}
   m_UseDelaunayMesh: 1
+--- !u!114 &22810285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22810281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2401cf3a57cac48d79745db67ae70603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Drag
+  cuttingBoard: {fileID: 1710053148}
+  bowl: {fileID: 870738829}
+  cutSprite: {fileID: 20903181385928707, guid: 99f1d70ea15cf4c2fac715cd10d94971, type: 3}
 --- !u!1 &866843987
 GameObject:
   m_ObjectHideFlags: 0
@@ -1155,9 +1187,10 @@ GameObject:
   - component: {fileID: 866843989}
   - component: {fileID: 866843988}
   - component: {fileID: 866843990}
+  - component: {fileID: 866843991}
   m_Layer: 0
   m_Name: SeasoningBottle_0
-  m_TagString: Untagged
+  m_TagString: NotCuttable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1230,7 +1263,7 @@ Transform:
   m_GameObject: {fileID: 866843987}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.93, y: -0.83, z: 0}
+  m_LocalPosition: {x: 4.61, y: -0.78, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1305,6 +1338,21 @@ PolygonCollider2D:
       - {x: 0.545, y: -1.3249999}
       - {x: 0.66499996, y: -1.2049999}
   m_UseDelaunayMesh: 1
+--- !u!114 &866843991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866843987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2401cf3a57cac48d79745db67ae70603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Drag
+  cuttingBoard: {fileID: 1710053148}
+  bowl: {fileID: 870738829}
+  cutSprite: {fileID: 0}
 --- !u!1 &870738825
 GameObject:
   m_ObjectHideFlags: 0
@@ -1316,6 +1364,7 @@ GameObject:
   - component: {fileID: 870738827}
   - component: {fileID: 870738826}
   - component: {fileID: 870738828}
+  - component: {fileID: 870738829}
   m_Layer: 0
   m_Name: Bowl_0
   m_TagString: Untagged
@@ -1391,7 +1440,7 @@ Transform:
   m_GameObject: {fileID: 870738825}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.46, y: -2.75, z: 0}
+  m_LocalPosition: {x: 8.13, y: -2.86, z: 0}
   m_LocalScale: {x: 0.11574189, y: 0.11574189, z: 0.11574189}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1698,6 +1747,18 @@ PolygonCollider2D:
       - {x: 1.6600007, y: -15.139999}
       - {x: 1.9350007, y: -15.115}
   m_UseDelaunayMesh: 1
+--- !u!114 &870738829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870738825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aac2fab0cf82748e38e35714dbd03b77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Bowl
 --- !u!1 &1299412433
 GameObject:
   m_ObjectHideFlags: 0
@@ -1709,9 +1770,10 @@ GameObject:
   - component: {fileID: 1299412435}
   - component: {fileID: 1299412434}
   - component: {fileID: 1299412436}
+  - component: {fileID: 1299412437}
   m_Layer: 0
   m_Name: WholeTuna_0
-  m_TagString: Untagged
+  m_TagString: Cuttable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2178,6 +2240,21 @@ PolygonCollider2D:
       - {x: -24.756248, y: -8.155811}
       - {x: -24.596874, y: -8.0495615}
   m_UseDelaunayMesh: 1
+--- !u!114 &1299412437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299412433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2401cf3a57cac48d79745db67ae70603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Drag
+  cuttingBoard: {fileID: 1710053148}
+  bowl: {fileID: 870738829}
+  cutSprite: {fileID: 4969319785227280077, guid: d9c05ed9be63f49029880ad79beae159, type: 3}
 --- !u!1 &1348078060
 GameObject:
   m_ObjectHideFlags: 0
@@ -2189,9 +2266,10 @@ GameObject:
   - component: {fileID: 1348078062}
   - component: {fileID: 1348078061}
   - component: {fileID: 1348078063}
+  - component: {fileID: 1348078064}
   m_Layer: 0
   m_Name: SaladDressing_0
-  m_TagString: Untagged
+  m_TagString: NotCuttable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2264,7 +2342,7 @@ Transform:
   m_GameObject: {fileID: 1348078060}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3, y: -0.43, z: 0}
+  m_LocalPosition: {x: 2.78, y: -0.43, z: 0}
   m_LocalScale: {x: 0.1319952, y: 0.1319952, z: 0.1319952}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2546,6 +2624,21 @@ PolygonCollider2D:
       - {x: 1.0025005, y: -13.432499}
       - {x: 1.3175005, y: -13.417499}
   m_UseDelaunayMesh: 1
+--- !u!114 &1348078064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348078060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2401cf3a57cac48d79745db67ae70603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Drag
+  cuttingBoard: {fileID: 1710053148}
+  bowl: {fileID: 870738829}
+  cutSprite: {fileID: 0}
 --- !u!1 &1378746906
 GameObject:
   m_ObjectHideFlags: 0
@@ -2785,6 +2878,7 @@ GameObject:
   - component: {fileID: 1710053146}
   - component: {fileID: 1710053145}
   - component: {fileID: 1710053147}
+  - component: {fileID: 1710053148}
   m_Layer: 0
   m_Name: CuttingBoard_0
   m_TagString: Untagged
@@ -2982,6 +3076,18 @@ PolygonCollider2D:
       - {x: 26.310703, y: -4.714125}
       - {x: 26.606798, y: -4.6845155}
   m_UseDelaunayMesh: 1
+--- !u!114 &1710053148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710053144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28a3a576da7214909baf9a7969122b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CuttingBoard
 --- !u!1 &1823837251
 GameObject:
   m_ObjectHideFlags: 0
@@ -2993,9 +3099,10 @@ GameObject:
   - component: {fileID: 1823837254}
   - component: {fileID: 1823837253}
   - component: {fileID: 1823837252}
+  - component: {fileID: 1823837255}
   m_Layer: 0
   m_Name: WholeTomato_0
-  m_TagString: Untagged
+  m_TagString: Cuttable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3573,6 +3680,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1823837255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823837251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2401cf3a57cac48d79745db67ae70603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Drag
+  cuttingBoard: {fileID: 1710053148}
+  bowl: {fileID: 870738829}
+  cutSprite: {fileID: -9205678200960984942, guid: ee937290123c846b59e407599f7c50fc, type: 3}
 --- !u!1001 &5159081693221166673
 PrefabInstance:
   m_ObjectHideFlags: 0
