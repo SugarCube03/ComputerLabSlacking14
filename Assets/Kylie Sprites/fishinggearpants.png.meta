@@ -1,0 +1,229 @@
+fileFormatVersion: 2
+guid: 674d7f8ed40d70a438923652021396d6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8326501953456334078
+    second: fishinggearpants_0
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fishinggearpants_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 900
+        height: 900
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: -143, y: 294}
+        - {x: -161, y: 276}
+        - {x: -153, y: 241}
+        - {x: -157, y: 205}
+        - {x: -163, y: 190}
+        - {x: -158, y: 134}
+        - {x: -159, y: 65}
+        - {x: -153, y: 5}
+        - {x: -138, y: -50}
+        - {x: -128, y: -141}
+        - {x: -120, y: -181}
+        - {x: -109, y: -198}
+        - {x: -114, y: -219}
+        - {x: -100, y: -269}
+        - {x: -94, y: -369}
+        - {x: -114, y: -390}
+        - {x: -148, y: -402}
+        - {x: -153, y: -421}
+        - {x: -145, y: -429}
+        - {x: -132, y: -431}
+        - {x: -104, y: -429}
+        - {x: -76, y: -411}
+        - {x: -34, y: -409}
+        - {x: -32, y: -392}
+        - {x: -41, y: -358}
+        - {x: -42, y: -328}
+        - {x: -35, y: -221}
+        - {x: -29, y: -174}
+        - {x: -43, y: -154}
+        - {x: -31, y: -104}
+        - {x: -16, y: -159}
+        - {x: 22, y: -214}
+        - {x: 38, y: -237}
+        - {x: 47, y: -251}
+        - {x: 71, y: -316}
+        - {x: 92, y: -353}
+        - {x: 74, y: -392}
+        - {x: 50, y: -409}
+        - {x: 55, y: -428}
+        - {x: 101, y: -430}
+        - {x: 138, y: -395}
+        - {x: 160, y: -373}
+        - {x: 153, y: -345}
+        - {x: 140, y: -323}
+        - {x: 115, y: -244}
+        - {x: 111, y: -225}
+        - {x: 71, y: -144}
+        - {x: 75, y: -103}
+        - {x: 65, y: -38}
+        - {x: 36, y: 194}
+        - {x: 16, y: 347}
+        - {x: 23, y: 430}
+        - {x: 21, y: 446}
+        - {x: 10, y: 446}
+        - {x: -1, y: 449}
+        - {x: -30, y: 364}
+        - {x: -42, y: 363}
+        - {x: -55, y: 364}
+        - {x: -70, y: 447}
+        - {x: -99, y: 446}
+      - - {x: -45, y: 287}
+        - {x: -34, y: 288}
+        - {x: -18, y: 286}
+        - {x: -3, y: 239}
+        - {x: 5, y: 236}
+        - {x: -3, y: 339}
+        - {x: -22, y: 343}
+      - - {x: -100, y: 408}
+        - {x: -104, y: 381}
+        - {x: -107, y: 345}
+        - {x: -126, y: 290}
+        - {x: -102, y: 287}
+        - {x: -77, y: 288}
+        - {x: -76, y: 292}
+        - {x: -80, y: 383}
+        - {x: -89, y: 428}
+      - - {x: -52, y: 315}
+        - {x: -49, y: 326}
+        - {x: -40, y: 341}
+        - {x: -53, y: 341}
+      - - {x: -13, y: 362}
+        - {x: -6, y: 362}
+        - {x: -5, y: 379}
+        - {x: -6, y: 379}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20b93aac692527c80800000000000000
+      internalID: -8326501953456334078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 2a6117cfbe52385439bcfaf966704f1e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      fishinggearpants_0: -8326501953456334078
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

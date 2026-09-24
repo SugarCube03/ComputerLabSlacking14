@@ -1,0 +1,57 @@
+{
+    "version": 1,
+    "name": "ShopControls",
+    "maps": [
+        {
+            "name": "ShoppingController",
+            "id": "85e71e87-2015-472e-ae5c-049c0bd0b647",
+            "actions": [
+                {
+                    "name": "Checkout",
+                    "type": "Button",
+                    "id": "ac50f648-622e-423d-a13a-9659a8f1480a",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "Discard",
+                    "type": "Button",
+                    "id": "9319399f-9174-401e-a70d-d503964f128b",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "4e84f8f2-e307-4216-80a1-3c190f6079b0",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Checkout",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d9794907-3d37-44a9-bdcb-dc3851b9759e",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Discard",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
