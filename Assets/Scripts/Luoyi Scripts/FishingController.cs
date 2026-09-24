@@ -15,8 +15,8 @@ public class FishingController : MonoBehaviour, Iminigame
     private LineRenderer lineRenderer;
 
     [Header("UI")]
-    public TextMeshProUGUI scoreText; //put the score text here
-    public TextMeshProUGUI fishCountText;// put the fish Count text here
+    //public TextMeshProUGUI scoreText; //put the score text here
+    //public TextMeshProUGUI fishCountText;// put the fish Count text here
     private int totalScore = 0;// start with 0
     private int fishCount = 0;
 
@@ -136,8 +136,8 @@ public class FishingController : MonoBehaviour, Iminigame
             {
                 totalScore += caughtFish.score;
                 fishCount += 1;
-                scoreText.text = "Score: " + totalScore;
-                fishCountText.text = "Fish Caught: " + fishCount;
+                //scoreText.text = "Score: " + totalScore;
+                //fishCountText.text = "Fish Caught: " + fishCount;
 
                 audioSource.PlayOneShot(catchSound);
 
