@@ -28,11 +28,11 @@ Transform:
   m_GameObject: {fileID: 614615406655372430}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.06042052, w: 0.998173}
-  m_LocalPosition: {x: -2.440143, y: -1.2594414, z: 0}
-  m_LocalScale: {x: 0.25484002, y: 0.25484002, z: 0.25484}
+  m_LocalPosition: {x: -0.70414317, y: -2.9665914, z: 0}
+  m_LocalScale: {x: 0.25484005, y: 0.25484005, z: 0.25484}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8857079693420034967}
+  m_Father: {fileID: 8726155344691801161}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -6.928}
 --- !u!212 &5520450877485795650
 SpriteRenderer:
@@ -772,11 +772,11 @@ Transform:
   m_GameObject: {fileID: 1229084533298511994}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.33, y: -3.62, z: 0}
+  m_LocalPosition: {x: 0.4059999, y: -5.32715, z: 0}
   m_LocalScale: {x: 0.24573, y: 0.24573, z: 0.24573}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8857079693420034967}
+  m_Father: {fileID: 8726155344691801161}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2477418286095607400
 SpriteRenderer:
@@ -993,11 +993,11 @@ Transform:
   m_GameObject: {fileID: 1843762701937828706}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.3675647, y: 6.579199, z: 0}
+  m_LocalPosition: {x: 5.6818824, y: -2.6984162, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8857079693420034967}
+  m_Father: {fileID: 6173793201832312154}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1961931387664550725
 SpriteRenderer:
@@ -1201,11 +1201,11 @@ Transform:
   m_GameObject: {fileID: 3540543526563539899}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.6432033, y: -0.6164062, z: 0}
+  m_LocalPosition: {x: 5.3792033, y: -2.3235562, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8857079693420034967}
+  m_Father: {fileID: 8726155344691801161}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &112186960253575115
 SpriteRenderer:
@@ -1486,6 +1486,39 @@ PolygonCollider2D:
       - {x: 1.7099999, y: 0.53999996}
       - {x: 1.6999999, y: 0.55}
   m_UseDelaunayMesh: 1
+--- !u!1 &3605053025984969547
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6173793201832312154}
+  m_Layer: 0
+  m_Name: DressingStep
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6173793201832312154
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3605053025984969547}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.736, y: 1.70715, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1027423950451528011}
+  - {fileID: 1456412521713047836}
+  m_Father: {fileID: 8857079693420034967}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3799518916376667667
 GameObject:
   m_ObjectHideFlags: 0
@@ -1514,11 +1547,11 @@ Transform:
   m_GameObject: {fileID: 3799518916376667667}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.0422935, y: -1.2741117, z: 0}
+  m_LocalPosition: {x: -5.3062935, y: -2.9812617, z: 0}
   m_LocalScale: {x: 0.11424, y: 0.11424, z: 0.11424}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8857079693420034967}
+  m_Father: {fileID: 8726155344691801161}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8506936803709499295
 SpriteRenderer:
@@ -1982,6 +2015,42 @@ MonoBehaviour:
   cuttingBoard: {fileID: 6800891980306188539}
   bowl: {fileID: 4890464725228756107}
   cutSprite: {fileID: 4969319785227280077, guid: d9c05ed9be63f49029880ad79beae159, type: 3}
+--- !u!1 &4411530142273524563
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8726155344691801161}
+  m_Layer: 0
+  m_Name: ChoppingStep
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8726155344691801161
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4411530142273524563}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.736, y: 1.70715, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5629424893170041745}
+  - {fileID: 7630826774301268626}
+  - {fileID: 951845313864717675}
+  - {fileID: 1600344734995420645}
+  - {fileID: 8403948290202518087}
+  m_Father: {fileID: 8857079693420034967}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5861481297583088831
 GameObject:
   m_ObjectHideFlags: 0
@@ -2010,11 +2079,11 @@ Transform:
   m_GameObject: {fileID: 5861481297583088831}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.5375645, y: 6.9291987, z: 0}
+  m_LocalPosition: {x: -2.1547318, y: -2.4194999, z: 0}
   m_LocalScale: {x: 0.132, y: 0.132, z: 0.132}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8857079693420034967}
+  m_Father: {fileID: 6173793201832312154}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5420742982894071809
 SpriteRenderer:
@@ -2394,11 +2463,11 @@ Transform:
   m_GameObject: {fileID: 6029450199184686725}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.096031904, y: -1.0817766, z: 0}
+  m_LocalPosition: {x: 1.639968, y: -2.7889266, z: 0}
   m_LocalScale: {x: 0.0466, y: 0.0466, z: 0.0466}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8857079693420034967}
+  m_Father: {fileID: 8726155344691801161}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &234643393111040919
 SpriteRenderer:
@@ -3092,7 +3161,7 @@ Transform:
   m_GameObject: {fileID: 8463961707431229266}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.238224, y: -2.86, z: 0}
+  m_LocalPosition: {x: 8.096055, y: -2.6822894, z: 0}
   m_LocalScale: {x: 0.115739994, y: 0.115739994, z: 0.115739994}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3479,6 +3548,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8857079693420034967}
+  - component: {fileID: 2160369965152416966}
   m_Layer: 0
   m_Name: SaladMinigame
   m_TagString: Untagged
@@ -3500,14 +3570,25 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2054444556310995663}
-  - {fileID: 5629424893170041745}
-  - {fileID: 7630826774301268626}
-  - {fileID: 951845313864717675}
-  - {fileID: 1027423950451528011}
-  - {fileID: 1456412521713047836}
-  - {fileID: 1600344734995420645}
-  - {fileID: 8403948290202518087}
   - {fileID: 3142247093113913596}
   - {fileID: 4630938218635609540}
+  - {fileID: 8726155344691801161}
+  - {fileID: 6173793201832312154}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2160369965152416966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8595995675493909100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41431086ce0bc48caa4c506b0046b6e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SaladManager
+  bowl: {fileID: 4890464725228756107}
+  choppingStep: {fileID: 4411530142273524563}
+  dressingStep: {fileID: 3605053025984969547}
+  newBowlPosition: {x: 0.09908485, y: -2.646747, z: 0}

@@ -12,6 +12,12 @@ public class Bowl : MonoBehaviour
         return currentFill >= capacityFill;
     }
 
+    // get how many ingredients are in there
+    public int GetFill()
+    {
+        return currentFill;
+    }
+
     // happens when something is dragged in
     public void IncreaseFill()
     {
