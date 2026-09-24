@@ -11,6 +11,8 @@ public class DragDrop : MonoBehaviour
     private Collider2D myCollider;
     private bool dragging = false;
     private bool onBoard = false;
+    private SpriteRenderer myRenderer;
+    private int normalOrder; // the Order in Layer it started with
 
     // for dropping
     // the two things that it can be dropped on
@@ -28,6 +30,8 @@ public class DragDrop : MonoBehaviour
         clickAction = InputSystem.actions.FindAction("Click");
         pointAction = InputSystem.actions.FindAction("Point");
         myCollider = GetComponent<Collider2D>();
+        myRenderer = GetComponent<SpriteRenderer>();
+        normalOrder = myRenderer.sortingOrder;
         startPosition = transform.position;
         boardCollider = cuttingBoard.GetComponent<Collider2D>();
         bowlCollider = bowl.GetComponent<Collider2D>();
@@ -47,6 +51,7 @@ public class DragDrop : MonoBehaviour
         if (dragging && !clickAction.IsPressed())
         {
             dragging = false;
+            myRenderer.sortingOrder = normalOrder; // go back to its normal layer
             HandleDrop();
         }
 
@@ -56,6 +61,8 @@ public class DragDrop : MonoBehaviour
         if (clickAction.WasPressedThisFrame() && myCollider.OverlapPoint(mousePosition) && !onBoard)
         {
             dragging = true;
+            // show on top of everything while dragging
+            myRenderer.sortingOrder = 3;
         }
 
         // still dragging, so have the object follow the mouse
@@ -73,7 +80,7 @@ public class DragDrop : MonoBehaviour
             // put ingredient onto cutting board
             if (CompareTag("Cuttable") && !cuttingBoard.IsOccupied())
             {
-                transform.position = cuttingBoard.transform.position;
+                transform.position = new Vector3(-1.33f, -2.7f, 0f); // spot on the cutting board
                 cuttingBoard.SetOccupied();
                 onBoard = true;
             }
