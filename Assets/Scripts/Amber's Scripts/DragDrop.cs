@@ -58,7 +58,7 @@ public class DragDrop : MonoBehaviour
         // just started dragging and we're in the hitbox; AI helped me figure out how to
         // see if the press was happening inside the hitbox
         // also disable dragging if this thing is on the board
-        if (clickAction.WasPressedThisFrame() && myCollider.OverlapPoint(mousePosition) && !onBoard)
+        if (clickAction.WasPressedThisFrame() && myCollider.OverlapPoint(mousePosition))
         {
             dragging = true;
             // show on top of everything while dragging
