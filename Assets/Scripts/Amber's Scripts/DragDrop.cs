@@ -25,6 +25,10 @@ public class DragDrop : MonoBehaviour
     // for cutting
     [SerializeField] private Sprite cutSprite;
 
+    // for sound
+    [SerializeField] private AudioClip ingredientDropSound;
+    [SerializeField] private AudioClip ingredientCutSound;
+
     private void Awake()
     {
         clickAction = InputSystem.actions.FindAction("Click");
