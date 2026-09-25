@@ -62,7 +62,7 @@ public class DragDrop : MonoBehaviour
         {
             dragging = true;
             // show on top of everything while dragging
-            myRenderer.sortingOrder = 3;
+            myRenderer.sortingOrder = 5;
         }
 
         // still dragging, so have the object follow the mouse
@@ -80,7 +80,7 @@ public class DragDrop : MonoBehaviour
             // put ingredient onto cutting board
             if (CompareTag("Cuttable") && !cuttingBoard.IsOccupied())
             {
-                transform.position = new Vector3(-1.33f, -2.7f, 0f); // spot on the cutting board
+                transform.position = cuttingBoard.transform.position + new Vector3(0f, 0.5f, 0f); // spot on the cutting board
                 cuttingBoard.SetOccupied();
                 onBoard = true;
             }
@@ -141,6 +141,7 @@ public class DragDrop : MonoBehaviour
         GetComponent<SpriteRenderer>().sprite = cutSprite;
         tag = "NotCuttable";
         onBoard = false; // make it draggable now
+        transform.position = cuttingBoard.transform.position + new Vector3(0f, 0.3f, 0f);
         startPosition = transform.position;
     }
 }

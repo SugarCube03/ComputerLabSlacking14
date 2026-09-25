@@ -165,7 +165,7 @@ MonoBehaviour:
   maxAngle: 60
   rotationOffset: 90
   extendSpeed: 5
-  maxLength: 4.5
+  maxLength: 5
   audioSource: {fileID: 4158969702188391840}
   castSound: {fileID: 8300000, guid: f9b1b4c33bb084bc5a65deab1c9f3bb4, type: 3}
   catchSound: {fileID: 8300000, guid: 67ce713a9895b4d94adf595b7f266367, type: 3}
@@ -324,7 +324,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5186104317241346331}
@@ -535,8 +535,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.215, y: 0.3589, z: 0}
-  m_LocalScale: {x: 2.2538764, y: 2, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.5777135, y: 1.4, z: 0.7}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8043050051631681317}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -857,7 +857,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2332267281694862849, guid: e83d7cd2b0b5d4edb90124c56569779e, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.2
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 2332267281694862849, guid: e83d7cd2b0b5d4edb90124c56569779e, type: 3}
       propertyPath: m_LocalScale.z
@@ -1125,7 +1125,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2332267281694862849, guid: e83d7cd2b0b5d4edb90124c56569779e, type: 3}
       propertyPath: m_ConstrainProportionsScale
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8995080470142146980, guid: e83d7cd2b0b5d4edb90124c56569779e, type: 3}
       propertyPath: m_Name
@@ -1517,7 +1517,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2332267281694862849, guid: e83d7cd2b0b5d4edb90124c56569779e, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.3
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 2332267281694862849, guid: e83d7cd2b0b5d4edb90124c56569779e, type: 3}
       propertyPath: m_LocalScale.z
@@ -1565,7 +1565,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2332267281694862849, guid: e83d7cd2b0b5d4edb90124c56569779e, type: 3}
       propertyPath: m_ConstrainProportionsScale
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8995080470142146980, guid: e83d7cd2b0b5d4edb90124c56569779e, type: 3}
       propertyPath: m_Name

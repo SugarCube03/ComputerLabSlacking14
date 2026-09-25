@@ -34,7 +34,8 @@ public class ClothingSpawner : MonoBehaviour
 
         Clothing selectedClothing = clothingItems[randomIndex];
 
-        currentItem = Instantiate(selectedClothing.prefab, spawnPoint.position, spawnPoint.rotation);
+        //i made ot so that the prefabs u make are children of the spawner so i it gets detsroyed when u exit the minigame- nizak
+        currentItem = Instantiate(selectedClothing.prefab, spawnPoint.position, spawnPoint.rotation, this.transform );
 
         currentItemIsFishingGear = selectedClothing.isFishingGear; 
 

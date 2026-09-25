@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.SocialPlatforms.Impl;
 
 
-public class ShoppingGameManager : MonoBehaviour
+public class ShoppingGameManager : MonoBehaviour, Iminigame
 {
     [SerializeField] private int totalQuestions = 10;
 
@@ -11,6 +11,7 @@ public class ShoppingGameManager : MonoBehaviour
 
     private int currentQuestion;
     private int playerScore;
+    private bool gamewon = false; //im trying to implement the interface to ur code -nizak
 
     private ShopControls playerControls;
 
@@ -64,6 +65,7 @@ public class ShoppingGameManager : MonoBehaviour
     {
         if (currentQuestion >= totalQuestions)
         {
+            gamewon = true;
             EndGame();
             return;
         }
@@ -98,7 +100,13 @@ public class ShoppingGameManager : MonoBehaviour
 
     }
 
+    public bool IsGameWon()
+    {
+        return gamewon;
+    }
 
-
-
+    public string GetGameInstructions()
+    {
+        throw new System.NotImplementedException();
+    }
 }
