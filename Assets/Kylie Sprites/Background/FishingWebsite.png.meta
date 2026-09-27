@@ -1,0 +1,191 @@
+fileFormatVersion: 2
+guid: ccfc0c7e513fc9744be02bdd8116b84f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1082359044886771916
+    second: FishingWebsite_0
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FishingWebsite_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: -450, y: 246}
+        - {x: -455, y: 239}
+        - {x: -455.37003, y: 226.38577}
+        - {x: -456, y: 201}
+        - {x: -455, y: 139}
+        - {x: -455.72382, y: 80.314575}
+        - {x: -455.59402, y: 23.590363}
+        - {x: -455.44766, y: -40.371094}
+        - {x: -455.216, y: -141.60776}
+        - {x: -455.11124, y: -187.38815}
+        - {x: -455, y: -236}
+        - {x: -453, y: -241}
+        - {x: -449, y: -245}
+        - {x: -442, y: -249}
+        - {x: -428, y: -249}
+        - {x: -358.75488, y: -249}
+        - {x: -253, y: -249}
+        - {x: -70.23413, y: -248.41043}
+        - {x: 57, y: -248}
+        - {x: 178.09369, y: -248}
+        - {x: 252.6355, y: -248}
+        - {x: 353.75427, y: -248}
+        - {x: 416, y: -248}
+        - {x: 430, y: -248}
+        - {x: 443, y: -248}
+        - {x: 450, y: -244}
+        - {x: 455, y: -237}
+        - {x: 456, y: -218}
+        - {x: 456, y: -168}
+        - {x: 456.4402, y: -84.375946}
+        - {x: 457, y: 22}
+        - {x: 456.26703, y: 100.78842}
+        - {x: 455.52008, y: 181.0943}
+        - {x: 455, y: 237}
+        - {x: 453, y: 241}
+        - {x: 450, y: 245}
+        - {x: 447, y: 247}
+        - {x: 443, y: 249}
+        - {x: 429, y: 249}
+        - {x: 324, y: 249}
+        - {x: 177.27539, y: 249}
+        - {x: 74, y: 249}
+        - {x: -64.655365, y: 249}
+        - {x: -145.29831, y: 249}
+        - {x: -241.87201, y: 249}
+        - {x: -332.2173, y: 249}
+        - {x: -430.2731, y: 249}
+        - {x: -443, y: 249}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc838e511df450f00800000000000000
+      internalID: 1082359044886771916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 7a51b5adc80bfcf42b6719aafb46b5b3
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      FishingWebsite_0: 1082359044886771916
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
