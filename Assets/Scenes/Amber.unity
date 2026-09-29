@@ -264,6 +264,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2160369965152416966, guid: 124bd3709f98346129f89502608c5f64, type: 3}
+      propertyPath: backgroundSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 6046611fd9ab64c698052dfccaaff2fe, type: 3}
     - target: {fileID: 8595995675493909100, guid: 124bd3709f98346129f89502608c5f64, type: 3}
       propertyPath: m_Name
       value: SaladMinigame
