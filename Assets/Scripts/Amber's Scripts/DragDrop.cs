@@ -26,6 +26,7 @@ public class DragDrop : MonoBehaviour
     [SerializeField] private Sprite cutSprite;
 
     // for sound
+    [SerializeField] private AudioClip ingredientPickupSound;
     [SerializeField] private AudioClip ingredientDropSound;
     [SerializeField] private AudioClip ingredientCutSound;
 
@@ -67,6 +68,7 @@ public class DragDrop : MonoBehaviour
             dragging = true;
             // show on top of everything while dragging
             myRenderer.sortingOrder = 5;
+            PlaySound(ingredientPickupSound);
         }
 
         // still dragging, so have the object follow the mouse
@@ -87,6 +89,7 @@ public class DragDrop : MonoBehaviour
                 transform.position = cuttingBoard.transform.position + new Vector3(0f, 0.5f, 0f); // spot on the cutting board
                 cuttingBoard.SetOccupied();
                 onBoard = true;
+                PlaySound(ingredientDropSound);
             }
             else
             {
@@ -102,6 +105,7 @@ public class DragDrop : MonoBehaviour
                 bowl.IncreaseFill();
                 gameObject.SetActive(false);
                 cuttingBoard.SetNotOccupied();
+                PlaySound(ingredientDropSound);
             }
             else
             {
@@ -142,10 +146,20 @@ public class DragDrop : MonoBehaviour
     // "cuts" the thing on the board (replaces sprites)
     private void Cut()
     {
-        GetComponent<SpriteRenderer>().sprite = cutSprite;
+        myRenderer.sprite = cutSprite;
         tag = "NotCuttable";
         onBoard = false; // make it draggable now
         transform.position = cuttingBoard.transform.position + new Vector3(0f, 0.3f, 0f);
         startPosition = transform.position;
+        PlaySound(ingredientCutSound);
+    }
+
+    // play a sound once
+    private void PlaySound(AudioClip clip)
+    {
+        if (clip != null)
+        {
+            AudioSource.PlayClipAtPoint(clip, transform.position);
+        }
     }
 }
