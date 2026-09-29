@@ -22,8 +22,8 @@ public class FishingController : MonoBehaviour, Iminigame
 
     [Header("Fish Icons")]
     public Image[] fishIcons;        // 5 Images
-    public Sprite caughtSprite; 
-    public Sprite uncaughtSprite; 
+    public Sprite caughtSprite;
+    public Sprite uncaughtSprite;
 
     [Header("Ending")]
     public GameObject endingPanel;
@@ -120,9 +120,17 @@ public class FishingController : MonoBehaviour, Iminigame
     void HandleRetracting()
     {
         float actualRetractSpeed = extendSpeed;
-        if (caughtFish != null)
+        if (caughtFishList.Count > 0)
         {
-            actualRetractSpeed = extendSpeed / caughtFish.weight;// heavier the fish, longer the time to catch the fish
+            float heaviestWeight = 1f;
+            foreach (Fish f in caughtFishList)
+            {
+                if (f.weight > heaviestWeight)
+                {
+                    heaviestWeight = f.weight;
+                }
+            }
+            actualRetractSpeed = extendSpeed / heaviestWeight;
         }
 
         currentLength -= actualRetractSpeed * Time.deltaTime;//the speed of retracting length
@@ -132,25 +140,29 @@ public class FishingController : MonoBehaviour, Iminigame
             currentLength = 0f;
             currentState = FishingState.Swinging; // retract to the starting point, start swinging again
 
-            if (caughtFish != null)
+            if (caughtFishList.Count > 0)
             {
-                totalScore += caughtFish.score;
-                fishCount += 1;
+
+                foreach (Fish f in caughtFishList)
+                {
+                    totalScore += f.score;
+                    fishCount += 1;
+
+                    if (fishIcons != null && fishCount - 1 < fishIcons.Length)
+                    {
+                        fishIcons[fishCount - 1].sprite = caughtSprite;
+                    }
+
+                    Destroy(f.gameObject);
+                }
+
                 //scoreText.text = "Score: " + totalScore;
                 //fishCountText.text = "Fish Caught: " + fishCount;
 
                 audioSource.PlayOneShot(catchSound);
 
-                // turn the icons yellow by index
-                if (fishIcons != null && fishCount - 1 < fishIcons.Length)
-                {
-                    fishIcons[fishCount - 1].sprite = caughtSprite;
-                }
+                caughtFishList.Clear();
 
-                Destroy(caughtFish.gameObject);
-                caughtFish = null;
-
-                // check whether all fish is caught
                 if (IsGameWon())
                 {
                     ShowEnding();
@@ -164,18 +176,13 @@ public class FishingController : MonoBehaviour, Iminigame
         hook.position = transform.position + (Vector3)(dir * currentLength);
     }
 
-    private Fish caughtFish;  // record the caught fish
-    public bool HasCaughtFish => caughtFish != null;
+    private System.Collections.Generic.List<Fish> caughtFishList = new System.Collections.Generic.List<Fish>();
+    public bool HasCaughtFish => caughtFishList.Count > 0;
 
     public void CatchFish(Fish fish)
     {
-    if (caughtFish != null)
-    {
-        return; 
-    }
-
-    caughtFish = fish;
-    currentState = FishingState.Retracting;
+        caughtFishList.Add(fish);
+        currentState = FishingState.Retracting;
     }
 
     //  change angle to direction

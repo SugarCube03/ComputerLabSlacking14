@@ -20,8 +20,8 @@ public class Fish : MonoBehaviour
 
     void Start()
     {
-        startPosition = transform.position* 0.5f;
-        transform.localScale*= 0.5f;
+        startPosition = transform.position;
+    
 
         phaseOffset = UnityEngine.Random.Range(0f, Mathf.PI * 2f);
     actualSpeed = swimSpeed + UnityEngine.Random.Range(-randomSpeedVariance, randomSpeedVariance);

@@ -18,7 +18,8 @@ public class SaladManager : MonoBehaviour, Iminigame
 
     private void Update()
     {
-        // everything has been cut and placed in the bowl
+        // everything has been cut and placed in the bowl,
+        // so we can move onto the next step
         if (!onDressingStep && bowl.GetFill() >= 4)
         {
             onDressingStep = true;

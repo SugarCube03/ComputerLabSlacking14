@@ -1,19 +1,18 @@
 using System;
-using UnityEditor.Build.Reporting;
 using UnityEngine;
 
 public class ClothingSpawner : MonoBehaviour
 {
 
-    [Serializable] 
-    public class Clothing
-    {
-        public GameObject prefab;
-        public bool isFishingGear;
-    }
+    [SerializeField] private GameObject[] FishingGear;
+    [SerializeField] private GameObject[] NonFishingGear;
+    [SerializeField] private Canvas canvas;
 
-    [SerializeField] private Clothing[] clothingItems;
-    [SerializeField] private Transform spawnPoint;
+    [Range(0f, 1f)]
+    [SerializeField] private float buyChance = 0.5f;
+    
+    private int canvasLayer;
+
 
     private GameObject currentItem;
     private bool currentItemIsFishingGear;
@@ -26,18 +25,24 @@ public class ClothingSpawner : MonoBehaviour
         if(currentItem != null)
         {
             Destroy(currentItem);
-        }
-        {
-            
-            randomIndex = UnityEngine.Random.Range(0, clothingItems.Length);
-        }
+        } 
+        
+            bool isBuy = UnityEngine.Random.value < buyChance; 
+            GameObject[] spawnList = isBuy ? FishingGear : NonFishingGear;
 
-        Clothing selectedClothing = clothingItems[randomIndex];
+            
+            randomIndex = UnityEngine.Random.Range(0, spawnList.Length);
+        
+
+         GameObject selectedItem =spawnList[randomIndex];
 
         //i made ot so that the prefabs u make are children of the spawner so i it gets detsroyed when u exit the minigame- nizak
-        currentItem = Instantiate(selectedClothing.prefab, spawnPoint.position, spawnPoint.rotation, this.transform );
+        currentItem = Instantiate(selectedItem, canvas.transform.position + selectedItem.transform.position, canvas.transform.rotation, this.transform );
+        SpriteRenderer spriteRenderer = currentItem.GetComponent<SpriteRenderer>();
+        spriteRenderer.sortingOrder = canvasLayer+1;
 
-        currentItemIsFishingGear = selectedClothing.isFishingGear; 
+
+        currentItemIsFishingGear = isBuy; 
 
     }
  
@@ -50,9 +55,9 @@ public class ClothingSpawner : MonoBehaviour
         }
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
-        
+        canvasLayer = canvas.sortingOrder;
     }
 
     // Update is called once per frame

@@ -11,13 +11,13 @@ public class CuttingBoard : MonoBehaviour
         return boardOccupied;
     }
 
-    // board has ingredient on it
+    // board now has ingredient on it
     public void SetOccupied()
     {
         boardOccupied = true;
     }
 
-    // board does not have ingredient on it
+    // board now does not have ingredient on it
     public void SetNotOccupied()
     {
         boardOccupied = false;

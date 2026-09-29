@@ -10,7 +10,7 @@ public class DragDrop : MonoBehaviour
     private InputAction pointAction; // for mouse's position (point)
     private Collider2D myCollider;
     private bool dragging = false;
-    private bool onBoard = false;
+    private bool onBoardUncut = false;
     private SpriteRenderer myRenderer;
     private int normalOrder; // the Order in Layer it started with
 
@@ -20,6 +20,7 @@ public class DragDrop : MonoBehaviour
     private Collider2D boardCollider;
     [SerializeField] private Bowl bowl;
     private Collider2D bowlCollider;
+    // where the ingredient starts during the game (changes after it is cut to the cutting board)
     private Vector2 startPosition;
 
     // for cutting
@@ -60,10 +61,9 @@ public class DragDrop : MonoBehaviour
             HandleDrop();
         }
 
-        // just started dragging and we're in the hitbox; AI helped me figure out how to
-        // see if the press was happening inside the hitbox
+        // just started dragging and we're in the hitbox
         // also disable dragging if this thing is on the board
-        if (clickAction.WasPressedThisFrame() && myCollider.OverlapPoint(mousePosition) && !onBoard)
+        if (clickAction.WasPressedThisFrame() && myCollider.OverlapPoint(mousePosition) && !onBoardUncut)
         {
             dragging = true;
             // show on top of everything while dragging
@@ -88,7 +88,7 @@ public class DragDrop : MonoBehaviour
             {
                 transform.position = cuttingBoard.transform.position + new Vector3(0f, 0.5f, 0f); // spot on the cutting board
                 cuttingBoard.SetOccupied();
-                onBoard = true;
+                onBoardUncut = true;
                 PlaySound(ingredientDropSound);
             }
             else
@@ -137,7 +137,7 @@ public class DragDrop : MonoBehaviour
     {
         Vector2 mousePosition = GetMouseWorldPosition();
 
-        if (clickAction.WasPressedThisFrame() && myCollider.OverlapPoint(mousePosition) && onBoard)
+        if (clickAction.WasPressedThisFrame() && myCollider.OverlapPoint(mousePosition) && onBoardUncut)
         {
             Cut();
         }
@@ -148,8 +148,10 @@ public class DragDrop : MonoBehaviour
     {
         myRenderer.sprite = cutSprite;
         tag = "NotCuttable";
-        onBoard = false; // make it draggable now
+        // make it draggable now
+        onBoardUncut = false;
         transform.position = cuttingBoard.transform.position + new Vector3(0f, 0.3f, 0f);
+        // change where our ingredient will bounce back to
         startPosition = transform.position;
         PlaySound(ingredientCutSound);
     }
@@ -157,9 +159,6 @@ public class DragDrop : MonoBehaviour
     // play a sound once
     private void PlaySound(AudioClip clip)
     {
-        if (clip != null)
-        {
-            AudioSource.PlayClipAtPoint(clip, transform.position);
-        }
+        AudioSource.PlayClipAtPoint(clip, transform.position);
     }
 }
