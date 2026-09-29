@@ -6,19 +6,19 @@ public class Bowl : MonoBehaviour
     private int currentFill = 0;
     private int capacityFill = 6;
 
-    // checks if bowl is ready (full)
+    // check if bowl has all the ingredients
     public bool IsFull()
     {
         return currentFill >= capacityFill;
     }
 
-    // get how many ingredients are in there
+    // get how many ingredients are in the bowl
     public int GetFill()
     {
         return currentFill;
     }
 
-    // happens when something is dragged in
+    // increase how many ingredients are in the bowl
     public void IncreaseFill()
     {
         currentFill++;

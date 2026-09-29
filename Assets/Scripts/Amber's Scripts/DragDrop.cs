@@ -20,6 +20,7 @@ public class DragDrop : MonoBehaviour
     private Collider2D boardCollider;
     [SerializeField] private Bowl bowl;
     private Collider2D bowlCollider;
+    // where the ingredient starts during the game (changes after it is cut to the cutting board)
     private Vector2 startPosition;
 
     // for cutting
@@ -60,8 +61,7 @@ public class DragDrop : MonoBehaviour
             HandleDrop();
         }
 
-        // just started dragging and we're in the hitbox; AI helped me figure out how to
-        // see if the press was happening inside the hitbox
+        // just started dragging and we're in the hitbox
         // also disable dragging if this thing is on the board
         if (clickAction.WasPressedThisFrame() && myCollider.OverlapPoint(mousePosition) && !onBoard)
         {
@@ -148,8 +148,10 @@ public class DragDrop : MonoBehaviour
     {
         myRenderer.sprite = cutSprite;
         tag = "NotCuttable";
-        onBoard = false; // make it draggable now
+        // make it draggable now
+        onBoard = false;
         transform.position = cuttingBoard.transform.position + new Vector3(0f, 0.3f, 0f);
+        // change where our ingredient will bounce back to
         startPosition = transform.position;
         PlaySound(ingredientCutSound);
     }
@@ -157,9 +159,6 @@ public class DragDrop : MonoBehaviour
     // play a sound once
     private void PlaySound(AudioClip clip)
     {
-        if (clip != null)
-        {
-            AudioSource.PlayClipAtPoint(clip, transform.position);
-        }
+        AudioSource.PlayClipAtPoint(clip, transform.position);
     }
 }
