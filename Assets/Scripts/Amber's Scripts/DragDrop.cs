@@ -28,7 +28,8 @@ public class DragDrop : MonoBehaviour
 
     // for sound
     [SerializeField] private AudioClip ingredientPickupSound;
-    [SerializeField] private AudioClip ingredientDropSound;
+    [SerializeField] private AudioClip ingredientOnBoardSound;
+    [SerializeField] private AudioClip ingredientSucessSound;
     [SerializeField] private AudioClip ingredientCutSound;
 
     private void Awake()
@@ -89,7 +90,7 @@ public class DragDrop : MonoBehaviour
                 transform.position = cuttingBoard.transform.position + new Vector3(0f, 0.5f, 0f); // spot on the cutting board
                 cuttingBoard.SetOccupied();
                 onBoardUncut = true;
-                PlaySound(ingredientDropSound);
+                PlaySound(ingredientOnBoardSound);
             }
             else
             {
@@ -105,7 +106,7 @@ public class DragDrop : MonoBehaviour
                 bowl.IncreaseFill();
                 gameObject.SetActive(false);
                 cuttingBoard.SetNotOccupied();
-                PlaySound(ingredientDropSound);
+                PlaySound(ingredientSucessSound);
             }
             else
             {
