@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0d573215942a82f45862c01607ea468f
+guid: 6f041c4555fe55f4ba920c0220356b25
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5153374769904660843
-    second: fishblublu_0
+      213: 7030264818038957058
+    second: smallfryplushie_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 150
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,57 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fishblublu_0
+      name: smallfryplushie_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 500
-        height: 625
+        width: 250
+        height: 250
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
-      outline:
-      - - {x: -216, y: 197.5}
-        - {x: -207, y: 181.5}
-        - {x: -208, y: 161.5}
-        - {x: -214, y: 142.5}
-        - {x: -229, y: 113.5}
-        - {x: -242, y: 81.5}
-        - {x: -244, y: 59.5}
-        - {x: -244, y: 25.5}
-        - {x: -243, y: -19.5}
-        - {x: -237, y: -65.5}
-        - {x: -216, y: -112.5}
-        - {x: -198, y: -140.5}
-        - {x: -167, y: -175.5}
-        - {x: -135, y: -191.5}
-        - {x: -101, y: -174.5}
-        - {x: -83, y: -156.5}
-        - {x: -63, y: -124.5}
-        - {x: -51, y: -85.5}
-        - {x: -38, y: -47.5}
-        - {x: -35, y: 2.5}
-        - {x: -33, y: 43.5}
-        - {x: -39, y: 83.5}
-        - {x: -52, y: 115.5}
-        - {x: -58, y: 141.5}
-        - {x: -71, y: 159.5}
-        - {x: -73, y: 177.5}
-        - {x: -64, y: 194.5}
-        - {x: -66, y: 212.5}
-        - {x: -89, y: 223.5}
-        - {x: -115, y: 228.5}
-        - {x: -139, y: 230.5}
-        - {x: -167, y: 228.5}
-        - {x: -187, y: 224.5}
-        - {x: -204, y: 220.5}
+      outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: b61b0aaac07748740800000000000000
-      internalID: 5153374769904660843
+      spriteID: 2046324aa94809160800000000000000
+      internalID: 7030264818038957058
       vertices: []
       indices: 
       edges: []
@@ -159,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 89eb5db1d28251f44aa94310c7904a17
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -169,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      fishblublu_0: 5153374769904660843
+      smallfryplushie_0: 7030264818038957058
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
