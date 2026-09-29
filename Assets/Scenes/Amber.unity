@@ -264,86 +264,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 316697285892938844, guid: 124bd3709f98346129f89502608c5f64, type: 3}
-      propertyPath: ingredientCutSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 9bbe18970f3bc44549fbe987e4c63272, type: 3}
-    - target: {fileID: 316697285892938844, guid: 124bd3709f98346129f89502608c5f64, type: 3}
-      propertyPath: ingredientDropSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 7cfcabc77381942ccac2c36270f0dd2e, type: 3}
-    - target: {fileID: 316697285892938844, guid: 124bd3709f98346129f89502608c5f64, type: 3}
-      propertyPath: ingredientPickupSound
-      value: 
-      objectReference: {fileID: 8300000, guid: a0633f0c1ad7d4650b52b811011adbfc, type: 3}
-    - target: {fileID: 930557644130633348, guid: 124bd3709f98346129f89502608c5f64, type: 3}
-      propertyPath: ingredientCutSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 85135e0763ef44baca3910f048bf0be2, type: 3}
-    - target: {fileID: 930557644130633348, guid: 124bd3709f98346129f89502608c5f64, type: 3}
-      propertyPath: ingredientDropSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 7cfcabc77381942ccac2c36270f0dd2e, type: 3}
-    - target: {fileID: 930557644130633348, guid: 124bd3709f98346129f89502608c5f64, type: 3}
-      propertyPath: ingredientPickupSound
-      value: 
-      objectReference: {fileID: 8300000, guid: a0633f0c1ad7d4650b52b811011adbfc, type: 3}
-    - target: {fileID: 3566064454408696601, guid: 124bd3709f98346129f89502608c5f64, type: 3}
-      propertyPath: ingredientCutSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 9bbe18970f3bc44549fbe987e4c63272, type: 3}
-    - target: {fileID: 3566064454408696601, guid: 124bd3709f98346129f89502608c5f64, type: 3}
-      propertyPath: ingredientDropSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 7cfcabc77381942ccac2c36270f0dd2e, type: 3}
-    - target: {fileID: 3566064454408696601, guid: 124bd3709f98346129f89502608c5f64, type: 3}
-      propertyPath: ingredientPickupSound
-      value: 
-      objectReference: {fileID: 8300000, guid: a0633f0c1ad7d4650b52b811011adbfc, type: 3}
-    - target: {fileID: 3854054578804519726, guid: 124bd3709f98346129f89502608c5f64, type: 3}
-      propertyPath: ingredientCutSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 85135e0763ef44baca3910f048bf0be2, type: 3}
-    - target: {fileID: 3854054578804519726, guid: 124bd3709f98346129f89502608c5f64, type: 3}
-      propertyPath: ingredientDropSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 7cfcabc77381942ccac2c36270f0dd2e, type: 3}
-    - target: {fileID: 3854054578804519726, guid: 124bd3709f98346129f89502608c5f64, type: 3}
-      propertyPath: ingredientPickupSound
-      value: 
-      objectReference: {fileID: 8300000, guid: a0633f0c1ad7d4650b52b811011adbfc, type: 3}
-    - target: {fileID: 4236446978988240598, guid: 124bd3709f98346129f89502608c5f64, type: 3}
-      propertyPath: ingredientCutSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 9bbe18970f3bc44549fbe987e4c63272, type: 3}
-    - target: {fileID: 4236446978988240598, guid: 124bd3709f98346129f89502608c5f64, type: 3}
-      propertyPath: ingredientDropSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 7cfcabc77381942ccac2c36270f0dd2e, type: 3}
-    - target: {fileID: 4236446978988240598, guid: 124bd3709f98346129f89502608c5f64, type: 3}
-      propertyPath: ingredientPickupSound
-      value: 
-      objectReference: {fileID: 8300000, guid: a0633f0c1ad7d4650b52b811011adbfc, type: 3}
-    - target: {fileID: 6384190757687035141, guid: 124bd3709f98346129f89502608c5f64, type: 3}
-      propertyPath: ingredientCutSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 9bbe18970f3bc44549fbe987e4c63272, type: 3}
-    - target: {fileID: 6384190757687035141, guid: 124bd3709f98346129f89502608c5f64, type: 3}
-      propertyPath: ingredientDropSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 7cfcabc77381942ccac2c36270f0dd2e, type: 3}
-    - target: {fileID: 6384190757687035141, guid: 124bd3709f98346129f89502608c5f64, type: 3}
-      propertyPath: ingredientPickupSound
-      value: 
-      objectReference: {fileID: 8300000, guid: a0633f0c1ad7d4650b52b811011adbfc, type: 3}
-    - target: {fileID: 7209319343042875432, guid: 124bd3709f98346129f89502608c5f64, type: 3}
-      propertyPath: ingredients.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7209319343042875432, guid: 124bd3709f98346129f89502608c5f64, type: 3}
-      propertyPath: 'ingredients.Array.data[0]'
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 8595995675493909100, guid: 124bd3709f98346129f89502608c5f64, type: 3}
       propertyPath: m_Name
       value: SaladMinigame
@@ -389,11 +309,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 3261102447570622811, guid: 124bd3709f98346129f89502608c5f64, type: 3}
-    - {fileID: 6640535934452607708, guid: 124bd3709f98346129f89502608c5f64, type: 3}
-    - {fileID: 2322539336703209282, guid: 124bd3709f98346129f89502608c5f64, type: 3}
-    - {fileID: 5053317039428390680, guid: 124bd3709f98346129f89502608c5f64, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 124bd3709f98346129f89502608c5f64, type: 3}

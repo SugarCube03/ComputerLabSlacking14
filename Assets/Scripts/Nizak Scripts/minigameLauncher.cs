@@ -22,6 +22,9 @@ public class minigameLauncher : MonoBehaviour
     {
         minigameOpen = true;
         minigameSetupUI.SetActive(true);
+        
+        minigamePrefab.transform.localScale = minigameContainer.localScale;
+        Vector3 spawnPos = minigamePrefab.transform.position + minigameContainer.position;
         currGamePrefab = Instantiate(minigamePrefab, minigameContainer.position, Quaternion.identity, minigameContainer);
         currMinigame = currGamePrefab.GetComponentInChildren<Iminigame>();
 
