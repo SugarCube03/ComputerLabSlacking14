@@ -40,7 +40,7 @@ public class ClothingSpawner : MonoBehaviour
         currentItemIsFishingGear = selectedClothing.isFishingGear; 
 
     }
-
+ 
     public void ClearItem()
     {
         if(currentItem != null)

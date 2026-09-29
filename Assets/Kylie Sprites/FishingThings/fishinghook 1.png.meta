@@ -1,0 +1,220 @@
+fileFormatVersion: 2
+guid: 1ccfcb6d020fb87438618ffe034e595c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5078436451576908623
+    second: fishinghook 1_0
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fishinghook 1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 600
+        height: 900
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: -104, y: -163}
+        - {x: -113, y: -179}
+        - {x: -116, y: -211}
+        - {x: -115, y: -234}
+        - {x: -102, y: -263}
+        - {x: -73, y: -285}
+        - {x: -31, y: -306}
+        - {x: 24, y: -305}
+        - {x: 62, y: -285}
+        - {x: 91, y: -257}
+        - {x: 109, y: -221}
+        - {x: 117, y: -183}
+        - {x: 116, y: -138}
+        - {x: 116, y: -97}
+        - {x: 116, y: -50}
+        - {x: 116, y: 22}
+        - {x: 117, y: 74}
+        - {x: 118, y: 111}
+        - {x: 117, y: 127}
+        - {x: 121, y: 153}
+        - {x: 125, y: 167}
+        - {x: 138, y: 179}
+        - {x: 134, y: 198}
+        - {x: 136, y: 216}
+        - {x: 134, y: 232}
+        - {x: 135, y: 255}
+        - {x: 122, y: 265}
+        - {x: 122, y: 283}
+        - {x: 122, y: 312}
+        - {x: 122, y: 338}
+        - {x: 122, y: 421}
+        - {x: 123, y: 450}
+        - {x: 110, y: 450}
+        - {x: 111, y: 418}
+        - {x: 110, y: 373}
+        - {x: 109, y: 324}
+        - {x: 109, y: 274}
+        - {x: 108, y: 262}
+        - {x: 89, y: 257}
+        - {x: 84, y: 249}
+        - {x: 89, y: 242}
+        - {x: 86, y: 234}
+        - {x: 90, y: 226}
+        - {x: 86, y: 218}
+        - {x: 91, y: 211}
+        - {x: 101, y: 208}
+        - {x: 96, y: 200}
+        - {x: 88, y: 192}
+        - {x: 89, y: 173}
+        - {x: 102, y: 160}
+        - {x: 101, y: 149}
+        - {x: 104, y: 124}
+        - {x: 102, y: 88}
+        - {x: 103, y: 46}
+        - {x: 102, y: -6}
+        - {x: 103, y: -56}
+        - {x: 102, y: -103}
+        - {x: 103, y: -158}
+        - {x: 101, y: -189}
+        - {x: 92, y: -218}
+        - {x: 81, y: -238}
+        - {x: 68, y: -257}
+        - {x: 48, y: -273}
+        - {x: 17, y: -285}
+        - {x: -4, y: -291}
+        - {x: -28, y: -290}
+        - {x: -51, y: -283}
+        - {x: -72, y: -267}
+        - {x: -87, y: -251}
+        - {x: -101, y: -226}
+        - {x: -104, y: -205}
+        - {x: -99, y: -186}
+        - {x: -87, y: -192}
+        - {x: -90, y: -171}
+        - {x: -92, y: -151}
+        - {x: -91, y: -128}
+        - {x: -90, y: -99}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b4fc5934f4c589b0800000000000000
+      internalID: -5078436451576908623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: e5e0e6aab0bec40409449476a05b33af
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fishinghook 1_0: -5078436451576908623
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
