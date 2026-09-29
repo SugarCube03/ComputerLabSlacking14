@@ -351,7 +351,7 @@ RectTransform:
   - {fileID: 337936009}
   - {fileID: 433078846}
   - {fileID: 1952505897}
-  m_Father: {fileID: 1107105159}
+  m_Father: {fileID: 1089018264}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -433,9 +433,9 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1016293062}
   m_CullTransparentMesh: 1
---- !u!224 &1107105159 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7654623471713748482, guid: ec2137e7a653a416e96679a5a3431caf, type: 3}
+--- !u!4 &1089018264 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8043050051631681317, guid: ec2137e7a653a416e96679a5a3431caf, type: 3}
   m_PrefabInstance: {fileID: 2031377431049006013}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1325514414
@@ -908,7 +908,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 7654623471713748482, guid: ec2137e7a653a416e96679a5a3431caf, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 8043050051631681317, guid: ec2137e7a653a416e96679a5a3431caf, type: 3}
       insertIndex: -1
       addedObject: {fileID: 659098308}
     m_AddedComponents: []

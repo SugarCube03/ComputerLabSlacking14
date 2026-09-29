@@ -142,12 +142,7 @@ public class FishingController : MonoBehaviour, Iminigame
 
             if (caughtFishList.Count > 0)
             {
-<<<<<<< Updated upstream
-                totalScore += caughtFish.score;
-                fishCount += 1;
-                //scoreText.text = "Score: " + totalScore;
-                //fishCountText.text = "Fish Caught: " + fishCount;
-=======
+
                 foreach (Fish f in caughtFishList)
                 {
                     totalScore += f.score;
@@ -161,9 +156,8 @@ public class FishingController : MonoBehaviour, Iminigame
                     Destroy(f.gameObject);
                 }
 
-                scoreText.text = "Score: " + totalScore;
-                fishCountText.text = "Fish Caught: " + fishCount;
->>>>>>> Stashed changes
+                //scoreText.text = "Score: " + totalScore;
+                //fishCountText.text = "Fish Caught: " + fishCount;
 
                 audioSource.PlayOneShot(catchSound);
 
