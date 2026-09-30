@@ -9,16 +9,16 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/win.unity
+    path: Assets/Scenes/Main Game/Ending Scenes/win.unity
     guid: 2d23ae0ea0aa94045a91de6e3aa86a16
   - enabled: 1
-    path: Assets/Scenes/NizakScene.unity
+    path: Assets/Scenes/Main Game/MainGame.unity
     guid: 0330f63797a1d4d53b3303e54bf3c3d4
   - enabled: 1
-    path: Assets/Scenes/failure.unity
+    path: Assets/Scenes/Main Game/Ending Scenes/failure.unity
     guid: d3e66bd077a09478f93ff42fa84e5854
   - enabled: 1
-    path: Assets/Scenes/timeUp.unity
+    path: Assets/Scenes/Main Game/Ending Scenes/timeUp.unity
     guid: 9c32f059068ca4887a61ace46fe74875
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

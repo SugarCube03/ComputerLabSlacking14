@@ -1,0 +1,61 @@
+using Unity.Mathematics;
+using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
+
+public class minigameLauncher : MonoBehaviour
+{
+
+    [SerializeField] private Transform minigameContainer;
+    [SerializeField] private GameObject minigameSetupUI;
+    [SerializeField] private AudioSource backgroundMusic;
+    [SerializeField] private  TextMeshProUGUI gameInstructions;
+    [SerializeField] Button exitButton;
+
+
+    private GameObject currGamePrefab;
+    private Iminigame currMinigame;
+
+    private bool minigameOpen;
+
+    void Awake()
+    {
+        minigameSetupUI.SetActive(false);
+        minigameOpen = false;
+    }
+    public void OpenGame(GameObject minigamePrefab)
+    {
+        minigameOpen = true;
+        minigameSetupUI.SetActive(true);
+        //backgroundMusic.Pause();
+        backgroundMusic.volume = backgroundMusic.volume/2;
+
+        minigamePrefab.transform.localScale = minigameContainer.localScale;
+        currGamePrefab = Instantiate(minigamePrefab, minigameContainer.position, Quaternion.identity, minigameContainer);
+        currMinigame = currGamePrefab.GetComponentInChildren<Iminigame>();
+        gameInstructions.text = currMinigame.GetGameInstructions();
+
+
+    }
+
+    public void CloseGame()
+    {
+        minigameSetupUI.SetActive(false);
+        Destroy(currGamePrefab);
+        minigameOpen = false;
+        //backgroundMusic.UnPause();
+        backgroundMusic.volume = backgroundMusic.volume*2;
+    }
+
+    public bool IsMinigameCleared()
+    {
+        return currMinigame.IsGameWon();
+    }
+
+    public bool IsMinigameOpen()
+    {
+        return minigameOpen;
+    }
+
+
+}
