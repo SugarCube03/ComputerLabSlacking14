@@ -1,5 +1,6 @@
 using Unity.Mathematics;
 using UnityEngine;
+using TMPro;
 using UnityEngine.UI;
 
 public class minigameLauncher : MonoBehaviour
@@ -8,7 +9,9 @@ public class minigameLauncher : MonoBehaviour
     [SerializeField] private Transform minigameContainer;
     [SerializeField] private GameObject minigameSetupUI;
     [SerializeField] private AudioSource backgroundMusic;
+    [SerializeField] private  TextMeshProUGUI gameInstructions;
     [SerializeField] Button exitButton;
+
 
     private GameObject currGamePrefab;
     private Iminigame currMinigame;
@@ -30,6 +33,8 @@ public class minigameLauncher : MonoBehaviour
         minigamePrefab.transform.localScale = minigameContainer.localScale;
         currGamePrefab = Instantiate(minigamePrefab, minigameContainer.position, Quaternion.identity, minigameContainer);
         currMinigame = currGamePrefab.GetComponentInChildren<Iminigame>();
+        gameInstructions.text = currMinigame.GetGameInstructions();
+
 
     }
 

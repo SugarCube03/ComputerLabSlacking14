@@ -47,16 +47,6 @@ public class BennoManager : MonoBehaviour
     {
         while (true)
         {
-<<<<<<< Updated upstream
-            currentState = State.Teaching;
-            stressAudio.loop = false;
-            stressAudio.Stop();
-            bennoAnimation.BennoTeach();
-            warning.SetActive(false);
-            yield return new WaitForSeconds(Random.Range(minDistractedTime, maxDistractedTime));
-
-=======
->>>>>>> Stashed changes
             currentState = State.Turning;
             stressAudio.clip = stressSound;
             stressAudio.loop = true;
@@ -67,18 +57,24 @@ public class BennoManager : MonoBehaviour
 
             StopCoroutine(flashingCoroutine);
             warning.SetActive(true);
+            stressAudio.loop = false;
+            stressAudio.Stop();
             currentState = State.Checking;
             bennoAnimation.BennoCheck();
             yield return checkWait;
 
-<<<<<<< Updated upstream
-=======
             currentState = State.Teaching;
+            
             bennoAnimation.BennoTeach();
             warning.SetActive(false);
             yield return new WaitForSeconds(Random.Range(minDistractedTime, maxDistractedTime));
+
+         
+
+           
+
         
->>>>>>> Stashed changes
+
         }
     }
 

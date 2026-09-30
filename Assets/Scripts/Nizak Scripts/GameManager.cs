@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 
 
@@ -81,6 +82,19 @@ public class GameManager : MonoBehaviour
         bennoManager.StopAllCoroutines();
         Debug.Log(reason);
         launcher.CloseGame();
+        switch (reason)
+        {
+            case EndReason.Won:
+                SceneManager.LoadScene("win");
+                break;
+            case EndReason.Caught:
+                SceneManager.LoadScene("failure");
+                break;
+            case EndReason.TimedOut:
+                SceneManager.LoadScene("timeUp");
+                break;
+        }
+
     }
 
     public void SetCurrButton(MiniGameButton button)
