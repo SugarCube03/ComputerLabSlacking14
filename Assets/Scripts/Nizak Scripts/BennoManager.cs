@@ -19,6 +19,10 @@ public class BennoManager : MonoBehaviour
     [SerializeField] private GameObject warning;
     private bool warningOn = true;
 
+    [Header("Stress Sound")]
+    [SerializeField] private AudioSource stressAudio;
+    [SerializeField] private AudioClip stressSound;
+
     private WaitForSeconds turnWait;
     private WaitForSeconds checkWait;
 
@@ -44,28 +48,39 @@ public class BennoManager : MonoBehaviour
         while (true)
         {
             currentState = State.Teaching;
+            stressAudio.loop = false;
+            stressAudio.Stop();
             bennoAnimation.BennoTeach();
             warning.SetActive(false);
             yield return new WaitForSeconds(Random.Range(minDistractedTime, maxDistractedTime));
 
             currentState = State.Turning;
-            flashingCoroutine=StartCoroutine(FlashWarning());
+            stressAudio.clip = stressSound;
+            stressAudio.loop = true;
+            stressAudio.Play();
+            flashingCoroutine = StartCoroutine(FlashWarning());
             bennoAnimation.BennoTurn();
-            yield return  turnWait;
+            yield return turnWait;
 
             StopCoroutine(flashingCoroutine);
             warning.SetActive(true);
             currentState = State.Checking;
             bennoAnimation.BennoCheck();
             yield return checkWait;
-        
+
         }
     }
 
     private IEnumerator FlashWarning()
     {
+        if (stressAudio.loop != true)
+        {
+            stressAudio.loop = true;
+            stressAudio.Play();
+        }
+
         warning.SetActive(true);
-         while (true)
+        while (true)
         {
             warning.SetActive(warningOn);
             yield return new WaitForSeconds(flashInterval);
@@ -75,7 +90,7 @@ public class BennoManager : MonoBehaviour
 
     void Update()
     {
-        
+
     }
 
     public State CurrentState()
