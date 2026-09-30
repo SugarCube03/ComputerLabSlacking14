@@ -1,25 +1,39 @@
 using System;
 using UnityEngine;
 
+//Kylie 
+//The ClothingSpawner class spawns random items and displays the items on the screen 
+//It selects a random item from the list based on the boolean created to check if items
+//are fishing gear or non-fishing gear
+
 public class ClothingSpawner : MonoBehaviour
 {
-
+    //Both arrays store fishing and non fishing gear as prefabs
+    //The canvas is a reference for where the items should spawn in the main scene
     [SerializeField] private GameObject[] FishingGear;
     [SerializeField] private GameObject[] NonFishingGear;
     [SerializeField] private Canvas canvas;
 
+    //Incorporation of rng for both fishing gear and non fishing gear 
     [Range(0f, 1f)]
+
+
     [SerializeField] private float buyChance = 0.5f;
     
+
     private int canvasLayer;
 
-
+    //This GameObject stores the asset of the current item that is spawned
     private GameObject currentItem;
-    private bool currentItemIsFishingGear;
 
+    //Type bool that will check whether the currently spawned item is fishing gear
+    private bool currentItemIsFishingGear;
     public bool CurrentItemIsFishingGear => currentItemIsFishingGear;
 
     int randomIndex;
+
+    //AI assisted - SpawnRandomItem allows other scripts to check
+    //if the current item is fishing gear or non-fishing gear
     public void SpawnRandomItem()
     {
         if(currentItem != null)
@@ -45,16 +59,17 @@ public class ClothingSpawner : MonoBehaviour
         currentItemIsFishingGear = isBuy; 
 
     }
- 
+    //AI assisted - checks if the current item is spawned, and then destroys it
     public void ClearItem()
     {
         if(currentItem != null)
-        {
+           {
             Destroy(currentItem);
             currentItem = null;
         }
     }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    //Awake runs when the object is intialized
+    //The Canvas's sorting order is saved here 
     void Awake()
     {
         canvasLayer = canvas.sortingOrder;
