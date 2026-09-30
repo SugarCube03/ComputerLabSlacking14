@@ -43,6 +43,7 @@ public class ShoppingGameManager : MonoBehaviour, Iminigame
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip checkoutSound;
     [SerializeField] private AudioClip discardSound;
+    [SerializeField] private AudioClip trashSound;
 
     //The original rotation of the ClothingSpawner is stored in startRot
     //It is reset after shaking
@@ -94,7 +95,7 @@ public class ShoppingGameManager : MonoBehaviour, Iminigame
         //IN OnCheckout, the inputAction is referenced when the player presses right arrow on the keyboard
         //The audioSource plays the checkout sound once
         //SubmitAnswer is called, and denotes the right arrow as true, aka "correct"
-        audioSource.PlayOneShot(checkoutSound);
+        
         SubmitAnswer(true);
       
     }
@@ -105,7 +106,8 @@ public class ShoppingGameManager : MonoBehaviour, Iminigame
         //In OnDiscard, the inputAction is referenced when the player presses thhe left arrow on the keyboard
         //The audioSource plays the discard sound once
         //SubmitAnswer is called, and denotes the left arrow as false, aka "wrong"
-        audioSource.PlayOneShot(discardSound);
+        
+        
         SubmitAnswer(false);
     }
    
@@ -161,12 +163,23 @@ public class ShoppingGameManager : MonoBehaviour, Iminigame
 
             //if FishingGear is the player's answer, it is considered correct
             Debug.Log("Correct!");
+            if (FishingGear)
+            {
+                audioSource.PlayOneShot(checkoutSound);
+            }
+            else
+            {
+                audioSource.PlayOneShot(trashSound);
+            }
+            
             NextItem();
+            
         }
         else
         {   //if the player says an item is not fishing gear, then it is false 
             Debug.Log("Incorrect!");
             StartCoroutine(ShakeCoroutine());
+            
         }
 
     }
@@ -197,12 +210,14 @@ public class ShoppingGameManager : MonoBehaviour, Iminigame
     IEnumerator ShakeCoroutine()
     {
     isShaking = true;
+    audioSource.PlayOneShot(discardSound);
      
     
     float elapsed = 0f;
 
     while (elapsed < duration)
     {
+        //ai helped generating the math
          float fade = 1f - elapsed / duration;
         float wave = Mathf.Sin(elapsed * speed) * fade; //sin wave so it smooths
 
