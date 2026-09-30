@@ -24,10 +24,10 @@ public class minigameLauncher : MonoBehaviour
     {
         minigameOpen = true;
         minigameSetupUI.SetActive(true);
-        backgroundMusic.Pause();
+        //backgroundMusic.Pause();
+        backgroundMusic.volume = backgroundMusic.volume/2;
 
         minigamePrefab.transform.localScale = minigameContainer.localScale;
-        Vector3 spawnPos = minigamePrefab.transform.position + minigameContainer.position;
         currGamePrefab = Instantiate(minigamePrefab, minigameContainer.position, Quaternion.identity, minigameContainer);
         currMinigame = currGamePrefab.GetComponentInChildren<Iminigame>();
 
@@ -39,6 +39,7 @@ public class minigameLauncher : MonoBehaviour
         Destroy(currGamePrefab);
         minigameOpen = false;
         backgroundMusic.UnPause();
+        backgroundMusic.volume = backgroundMusic.volume*2;
     }
 
     public bool IsMinigameCleared()
