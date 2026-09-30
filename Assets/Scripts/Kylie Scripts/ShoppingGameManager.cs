@@ -11,7 +11,7 @@ using UnityEngine.SocialPlatforms.Impl;
 public class ShoppingGameManager : MonoBehaviour, Iminigame
 {
     //AI assisted - totalQuestions is the total amount of questions the player answers 
-    [SerializeField] private int totalQuestions = 10;
+    private int totalQuestions;
 
     //Reference to the clothing spawner
     [SerializeField] private ClothingSpawner clothingSpawner;
@@ -59,6 +59,7 @@ public class ShoppingGameManager : MonoBehaviour, Iminigame
         //Both the start position and rotation of the Clothing Spawner is stored in each variable
         startPos = clothingSpawner.transform.position;
         startRot =clothingSpawner.transform.rotation;
+        totalQuestions=clothingSpawner.GetSpawnDictionaryLength();
     }
 
 

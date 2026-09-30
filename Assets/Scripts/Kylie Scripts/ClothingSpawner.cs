@@ -1,5 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
+using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using Unity.Collections;
 using UnityEngine;
 
@@ -15,11 +18,10 @@ public class ClothingSpawner : MonoBehaviour
     [SerializeField] private GameObject[] FishingGear;
     [SerializeField] private GameObject[] NonFishingGear;
     [SerializeField] private Canvas canvas;
-
+    
+    private System.Random systemRandom = new System.Random();
 
     //Incorporation of rng for both fishing gear and non fishing gear 
-
-    Dictionary <GameObject, bool> shopStack = new Dictionary<GameObject, bool>();
 
     [SerializeField] private float buyChance = 0.5f;
     
@@ -33,6 +35,9 @@ public class ClothingSpawner : MonoBehaviour
     private bool currentItemIsFishingGear;
     public bool CurrentItemIsFishingGear => currentItemIsFishingGear;
 
+    // dictionary
+    private Dictionary<GameObject, bool> spawnDictionary= new Dictionary<GameObject,bool>();
+
     int randomIndex;
 
     //AI assisted - SpawnRandomItem allows other scripts to check
@@ -44,15 +49,10 @@ public class ClothingSpawner : MonoBehaviour
         {
             Destroy(currentItem);
         } 
-        
-            bool isBuy = UnityEngine.Random.value < buyChance; 
-            GameObject[] spawnList = isBuy ? FishingGear : NonFishingGear;
 
-            
-            randomIndex = UnityEngine.Random.Range(0, spawnList.Length);
-        
 
-         GameObject selectedItem =spawnList[randomIndex];
+            GameObject selectedItem = spawnDictionary.ElementAt(systemRandom.Next(0, spawnDictionary.Count)).Key;
+          
 
         //i made ot so that the prefabs u make are children of the spawner so i it gets detsroyed when u exit the minigame- nizak
         currentItem = Instantiate(selectedItem, canvas.transform.position + selectedItem.transform.position, canvas.transform.rotation, this.transform );
@@ -60,7 +60,9 @@ public class ClothingSpawner : MonoBehaviour
         spriteRenderer.sortingOrder = canvasLayer+1;
 
 
-        currentItemIsFishingGear = isBuy; 
+        currentItemIsFishingGear = spawnDictionary[selectedItem]; 
+        spawnDictionary.Remove(selectedItem);
+        
 
     }
     //AI assisted - checks if the current item is spawned, and then destroys it
@@ -72,13 +74,37 @@ public class ClothingSpawner : MonoBehaviour
             currentItem = null;
         }
     }
+
+    // iterate through fishing list + add fishing prefab + true 
+    // if already used, change to false
+    private void ToDictionary()
+    {
+        for(int i = 0; i < FishingGear.Length; i++)
+        {
+            spawnDictionary.Add(FishingGear[i], true);
+        }
+
+        for(int i = 0; i < NonFishingGear.Length; i++)
+        {
+            spawnDictionary.Add(NonFishingGear[i], false);
+        }
+
+
+    }
+
+
     //Awake runs when the object is intialized
     //The Canvas's sorting order is saved here 
     void Awake()
     {
         canvasLayer = canvas.sortingOrder;
+        ToDictionary();
     }
 
+    public int GetSpawnDictionaryLength()
+    {
+        return spawnDictionary.Count();
+    }
     // Update is called once per frame
     void Update()
     {
