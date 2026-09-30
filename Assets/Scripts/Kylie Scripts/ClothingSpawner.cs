@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using Unity.Collections;
 using UnityEngine;
 
 //Kylie 
@@ -14,9 +16,10 @@ public class ClothingSpawner : MonoBehaviour
     [SerializeField] private GameObject[] NonFishingGear;
     [SerializeField] private Canvas canvas;
 
-    //Incorporation of rng for both fishing gear and non fishing gear 
-    [Range(0f, 1f)]
 
+    //Incorporation of rng for both fishing gear and non fishing gear 
+
+    Dictionary <GameObject, bool> shopStack = new Dictionary<GameObject, bool>();
 
     [SerializeField] private float buyChance = 0.5f;
     
@@ -34,6 +37,7 @@ public class ClothingSpawner : MonoBehaviour
 
     //AI assisted - SpawnRandomItem allows other scripts to check
     //if the current item is fishing gear or non-fishing gear
+
     public void SpawnRandomItem()
     {
         if(currentItem != null)
