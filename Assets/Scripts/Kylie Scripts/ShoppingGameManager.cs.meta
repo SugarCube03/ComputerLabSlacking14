@@ -1,2 +1,15 @@
 fileFormatVersion: 2
 guid: a639188a0e61e7247ba6c45580e90491
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - clothingSpawner: {instanceID: 0}
+  - audioSource: {instanceID: 0}
+  - checkoutSound: {fileID: 8300000, guid: cfe0a0c0448bfac41aded22bc4406cf4, type: 3}
+  - discardSound: {fileID: 8300000, guid: 3a26ddc1edbc6634398b50e91855ef86, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
