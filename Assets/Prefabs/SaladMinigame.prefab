@@ -745,8 +745,8 @@ MonoBehaviour:
   bowl: {fileID: 4890464725228756107}
   cutSprite: {fileID: -7553434852870291856, guid: a402ded7d14f847eb9d06f608bead074, type: 3}
   ingredientPickupSound: {fileID: 8300000, guid: a0633f0c1ad7d4650b52b811011adbfc, type: 3}
-  ingredientOnBoardSound: {fileID: 0}
-  ingredientSucessSound: {fileID: 0}
+  ingredientOnBoardSound: {fileID: 8300000, guid: 7cfcabc77381942ccac2c36270f0dd2e, type: 3}
+  ingredientSucessSound: {fileID: 8300000, guid: 67ce713a9895b4d94adf595b7f266367, type: 3}
   ingredientCutSound: {fileID: 8300000, guid: 9bbe18970f3bc44549fbe987e4c63272, type: 3}
 --- !u!1 &1229084533298511994
 GameObject:
@@ -1276,8 +1276,8 @@ MonoBehaviour:
   bowl: {fileID: 4890464725228756107}
   cutSprite: {fileID: 0}
   ingredientPickupSound: {fileID: 8300000, guid: a0633f0c1ad7d4650b52b811011adbfc, type: 3}
-  ingredientOnBoardSound: {fileID: 0}
-  ingredientSucessSound: {fileID: 0}
+  ingredientOnBoardSound: {fileID: 8300000, guid: 7cfcabc77381942ccac2c36270f0dd2e, type: 3}
+  ingredientSucessSound: {fileID: 8300000, guid: 67ce713a9895b4d94adf595b7f266367, type: 3}
   ingredientCutSound: {fileID: 8300000, guid: 85135e0763ef44baca3910f048bf0be2, type: 3}
 --- !u!1 &3540543526563539899
 GameObject:
@@ -1388,8 +1388,8 @@ MonoBehaviour:
   bowl: {fileID: 4890464725228756107}
   cutSprite: {fileID: 20903181385928707, guid: 99f1d70ea15cf4c2fac715cd10d94971, type: 3}
   ingredientPickupSound: {fileID: 8300000, guid: a0633f0c1ad7d4650b52b811011adbfc, type: 3}
-  ingredientOnBoardSound: {fileID: 0}
-  ingredientSucessSound: {fileID: 0}
+  ingredientOnBoardSound: {fileID: 8300000, guid: 7cfcabc77381942ccac2c36270f0dd2e, type: 3}
+  ingredientSucessSound: {fileID: 8300000, guid: 67ce713a9895b4d94adf595b7f266367, type: 3}
   ingredientCutSound: {fileID: 8300000, guid: 9bbe18970f3bc44549fbe987e4c63272, type: 3}
 --- !u!60 &2825035968153267732
 PolygonCollider2D:
@@ -2126,8 +2126,8 @@ MonoBehaviour:
   bowl: {fileID: 4890464725228756107}
   cutSprite: {fileID: 4969319785227280077, guid: d9c05ed9be63f49029880ad79beae159, type: 3}
   ingredientPickupSound: {fileID: 8300000, guid: a0633f0c1ad7d4650b52b811011adbfc, type: 3}
-  ingredientOnBoardSound: {fileID: 0}
-  ingredientSucessSound: {fileID: 0}
+  ingredientOnBoardSound: {fileID: 8300000, guid: 7cfcabc77381942ccac2c36270f0dd2e, type: 3}
+  ingredientSucessSound: {fileID: 8300000, guid: 67ce713a9895b4d94adf595b7f266367, type: 3}
   ingredientCutSound: {fileID: 8300000, guid: 9bbe18970f3bc44549fbe987e4c63272, type: 3}
 --- !u!1 &4411530142273524563
 GameObject:
@@ -2551,8 +2551,8 @@ MonoBehaviour:
   bowl: {fileID: 4890464725228756107}
   cutSprite: {fileID: 0}
   ingredientPickupSound: {fileID: 8300000, guid: a0633f0c1ad7d4650b52b811011adbfc, type: 3}
-  ingredientOnBoardSound: {fileID: 0}
-  ingredientSucessSound: {fileID: 0}
+  ingredientOnBoardSound: {fileID: 8300000, guid: 7cfcabc77381942ccac2c36270f0dd2e, type: 3}
+  ingredientSucessSound: {fileID: 8300000, guid: 67ce713a9895b4d94adf595b7f266367, type: 3}
   ingredientCutSound: {fileID: 8300000, guid: 85135e0763ef44baca3910f048bf0be2, type: 3}
 --- !u!1 &6029450199184686725
 GameObject:
@@ -3162,8 +3162,8 @@ MonoBehaviour:
   bowl: {fileID: 4890464725228756107}
   cutSprite: {fileID: -9205678200960984942, guid: ee937290123c846b59e407599f7c50fc, type: 3}
   ingredientPickupSound: {fileID: 8300000, guid: a0633f0c1ad7d4650b52b811011adbfc, type: 3}
-  ingredientOnBoardSound: {fileID: 0}
-  ingredientSucessSound: {fileID: 0}
+  ingredientOnBoardSound: {fileID: 8300000, guid: 7cfcabc77381942ccac2c36270f0dd2e, type: 3}
+  ingredientSucessSound: {fileID: 8300000, guid: 67ce713a9895b4d94adf595b7f266367, type: 3}
   ingredientCutSound: {fileID: 8300000, guid: 9bbe18970f3bc44549fbe987e4c63272, type: 3}
 --- !u!1 &6431734520321649063
 GameObject:
