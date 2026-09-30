@@ -4,10 +4,12 @@ using UnityEngine.UI;
 
 public class minigameLauncher : MonoBehaviour
 {
-   
+
     [SerializeField] private Transform minigameContainer;
     [SerializeField] private GameObject minigameSetupUI;
+    [SerializeField] private AudioSource backgroundMusic;
     [SerializeField] Button exitButton;
+
     private GameObject currGamePrefab;
     private Iminigame currMinigame;
 
@@ -22,7 +24,8 @@ public class minigameLauncher : MonoBehaviour
     {
         minigameOpen = true;
         minigameSetupUI.SetActive(true);
-        
+        backgroundMusic.Pause();
+
         minigamePrefab.transform.localScale = minigameContainer.localScale;
         Vector3 spawnPos = minigamePrefab.transform.position + minigameContainer.position;
         currGamePrefab = Instantiate(minigamePrefab, minigameContainer.position, Quaternion.identity, minigameContainer);
@@ -35,17 +38,18 @@ public class minigameLauncher : MonoBehaviour
         minigameSetupUI.SetActive(false);
         Destroy(currGamePrefab);
         minigameOpen = false;
+        backgroundMusic.UnPause();
     }
- 
+
     public bool IsMinigameCleared()
     {
         return currMinigame.IsGameWon();
     }
 
-    public bool GetMinigameStatus()
+    public bool IsMinigameOpen()
     {
         return minigameOpen;
     }
-   
+
 
 }

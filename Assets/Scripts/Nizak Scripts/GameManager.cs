@@ -8,13 +8,13 @@ using System.Collections;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private minigameLauncher launcher;
-   [SerializeField] private GameObject clear;
+    [SerializeField] private GameObject clear;
 
-   [SerializeField] private BennoManager bennoManager;
-   [SerializeField] private MiniGameButton [] minigameButtonList;
+    [SerializeField] private BennoManager bennoManager;
+    [SerializeField] private MiniGameButton[] minigameButtonList;
 
-   [SerializeField] private float timeLimit = 60f;
-   [SerializeField] private TimerCode timer;
+    [SerializeField] private float timeLimit = 60f;
+    [SerializeField] private TimerCode timer;
 
     private MiniGameButton currButton;
 
@@ -22,16 +22,16 @@ public class GameManager : MonoBehaviour
 
     private bool currentlySlacking;
 
- 
+
     private float timeRemaining;
-    
+
     public enum EndReason
     {
         Won,
         Caught,
         TimedOut
     }
-    
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
@@ -49,31 +49,33 @@ public class GameManager : MonoBehaviour
             EndGame(EndReason.Won);
         }
 
-      currentlySlacking = launcher.GetMinigameStatus();
+        currentlySlacking = launcher.IsMinigameOpen();
 
-      if (currentlySlacking)
+        if (currentlySlacking)
         {
             if (!bennoManager.IsChecking())
             {
-                if (launcher.IsMinigameCleared()){
-                clear.SetActive(true);
-                currButton.disableButton();
-                clearedGames.Add(currButton);}
+                if (launcher.IsMinigameCleared())
+                {
+                    clear.SetActive(true);
+                    currButton.disableButton();
+                    clearedGames.Add(currButton);
+                }
             }
             else
             {
                 EndGame(EndReason.Caught);
             }
         }
-           
+
         else
         {
             clear.SetActive(false);
         }
-    
+
     }
 
-    void EndGame( EndReason reason)
+    void EndGame(EndReason reason)
     {
         StopAllCoroutines();
         bennoManager.StopAllCoroutines();
@@ -99,5 +101,5 @@ public class GameManager : MonoBehaviour
     }
 
 
-    
+
 }
