@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 10b8d17cdad8e4fdbb1b1b049ffcb8b7
+guid: 70b98324d357e42939fa083b3accab8b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3209833726738011397
-    second: transparent_0
+      213: 900393001547933920
+    second: sideArrow_0
+  - first:
+      213: -6118479475026492435
+    second: sideArrow_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +103,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: transparent_0
+      name: LeftArrow
       rect:
         serializedVersion: 2
-        x: 816
-        y: 148
-        width: 862
-        height: 726
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 107
+        y: 157
+        width: 448
+        height: 393
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4999999}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bfa66b16b316473d0800000000000000
-      internalID: -3209833726738011397
+      spriteID: 0e823871aa6de7c00800000000000000
+      internalID: 900393001547933920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightArrow
+      rect:
+        serializedVersion: 2
+        x: 1156
+        y: 157
+        width: 447
+        height: 393
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de30785a55bc61ba0800000000000000
+      internalID: -6118479475026492435
       vertices: []
       indices: 
       edges: []
@@ -125,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: a216b075aa57b4105a01ce14a0c25cc3
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      transparent_0: -3209833726738011397
+      LeftArrow: 900393001547933920
+      RightArrow: -6118479475026492435
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

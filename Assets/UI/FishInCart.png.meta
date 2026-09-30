@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 70b98324d357e42939fa083b3accab8b
+guid: 10b8d17cdad8e4fdbb1b1b049ffcb8b7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 900393001547933920
-    second: sideArrow_0
-  - first:
-      213: -6118479475026492435
-    second: sideArrow_1
+      213: -3209833726738011397
+    second: transparent_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,45 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sideArrow_0
+      name: FishInCart
       rect:
         serializedVersion: 2
-        x: 107
-        y: 157
-        width: 448
-        height: 393
+        x: 816
+        y: 148
+        width: 862
+        height: 726
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0e823871aa6de7c00800000000000000
-      internalID: 900393001547933920
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sideArrow_1
-      rect:
-        serializedVersion: 2
-        x: 1156
-        y: 157
-        width: 447
-        height: 393
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: de30785a55bc61ba0800000000000000
-      internalID: -6118479475026492435
+      spriteID: bfa66b16b316473d0800000000000000
+      internalID: -3209833726738011397
       vertices: []
       indices: 
       edges: []
@@ -150,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 6367a3b1580b64cfca1fd92fd0596ab2
     internalID: 0
     vertices: []
     indices: 
@@ -160,8 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sideArrow_0: 900393001547933920
-      sideArrow_1: -6118479475026492435
+      FishInCart: -3209833726738011397
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
