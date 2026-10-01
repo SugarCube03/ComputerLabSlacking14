@@ -10,7 +10,7 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class ShoppingGameManager : MonoBehaviour, Iminigame
 {
-    //AI assisted - totalQuestions is the total amount of questions the player answers 
+    //totalQuestions is the total amount of questions the player answers 
     private int totalQuestions;
 
     //Reference to the clothing spawner
@@ -80,6 +80,7 @@ public class ShoppingGameManager : MonoBehaviour, Iminigame
         //unsubscribes from the Checkout input event
         playerControls.ShoppingController.Checkout.performed -= OnCheckout;
         playerControls.ShoppingController.Discard.performed -= OnDiscard;
+        playerControls.ShoppingController.Disable();
 
     }
 
@@ -101,7 +102,7 @@ public class ShoppingGameManager : MonoBehaviour, Iminigame
       
     }
 
-    //AI assisted 
+    
     private void OnDiscard(InputAction.CallbackContext context)
     {
         //In OnDiscard, the inputAction is referenced when the player presses thhe left arrow on the keyboard
@@ -121,7 +122,7 @@ public class ShoppingGameManager : MonoBehaviour, Iminigame
         NextItem();
     }
 
-    //AI assisted
+  
     private void NextItem()
 
        
@@ -146,7 +147,7 @@ public class ShoppingGameManager : MonoBehaviour, Iminigame
         clothingSpawner.SpawnRandomItem();
     }
 
-    //AI assisted 
+  
 
     //SubmitAnswer checks if the players answer is correct or wrong
     
@@ -185,13 +186,14 @@ public class ShoppingGameManager : MonoBehaviour, Iminigame
 
     }
 
-    //AI assisted
+
     //EndGame stops the minigame
     //In addition, it prevents the items spawning from the clothing spawner and
     //destroys an item from the scene
     private void EndGame()
     {
         clothingSpawner.ClearItem();
+        playerControls.ShoppingController.Disable();
 
     }
     

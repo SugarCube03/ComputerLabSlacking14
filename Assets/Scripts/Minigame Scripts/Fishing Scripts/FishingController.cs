@@ -8,15 +8,12 @@ public class FishingController : MonoBehaviour, Iminigame
     // showing which state hook currently at
     private enum FishingState { Swinging, Extending, Retracting }
     private FishingState currentState = FishingState.Swinging;
-    private String GameInstruction = "Press space to catch the fish";//game instruction
+    private String GameInstruction = "Click the mouse to catch the fish in the sea";//game instruction
 
     [Header("References")]
     public Transform hook;              // the hook object
     private LineRenderer lineRenderer;
 
-    [Header("UI")]
-    //public TextMeshProUGUI scoreText; //put the score text here
-    //public TextMeshProUGUI fishCountText;// put the fish Count text here
     private int totalScore = 0;// start with 0
     private int fishCount = 0;
 
@@ -64,6 +61,10 @@ public class FishingController : MonoBehaviour, Iminigame
 
     void Update()
     {
+        if (IsGameWon())
+        {
+            return;
+        }
         switch (currentState)//there are 3 different type of state, and the switch will moniter which state is currently on
         {
             case FishingState.Swinging:

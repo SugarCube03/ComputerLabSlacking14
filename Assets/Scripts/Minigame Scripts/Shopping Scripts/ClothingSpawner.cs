@@ -22,8 +22,6 @@ public class ClothingSpawner : MonoBehaviour
     private System.Random systemRandom = new System.Random();
 
     //Incorporation of rng for both fishing gear and non fishing gear 
-
-    [SerializeField] private float buyChance = 0.5f;
     
 
     private int canvasLayer;
@@ -106,8 +104,4 @@ public class ClothingSpawner : MonoBehaviour
         return spawnDictionary.Count();
     }
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
